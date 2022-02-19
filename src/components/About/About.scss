@@ -1,0 +1,100 @@
+@import "../../sass/config";
+@import "../../sass/mixins";
+@import "../../sass/breakpoints";
+
+.about {
+  .section__title {
+    padding-top: $section-top;
+
+    .social {
+      @include flex();
+      gap: 2rem;
+
+      a {
+        font-size: 1.4rem;
+        color: $light-text;
+      }
+
+      .linkedin:hover {
+        color: #0a66c2;
+      }
+
+      .dribbble:hover {
+        color: #ea4c89;
+      }
+
+      .github:hover {
+        color: #ffffff;
+      }
+    }
+  }
+
+  &__info {
+    @include flex($justify: flex-start);
+    gap: 4.8rem;
+    padding-bottom: $section-bottom-big;
+
+    &__profile {
+      @include flex($direction: column, $align: flex-start);
+      gap: 1rem;
+
+      .image {
+        width: 240.467px;
+        height: 312px;
+        background-color: $blue-alt2;
+        border-radius: 14px;
+        box-shadow: $box-shadow-small;
+
+        @include bg($url: "../images/profile.png");
+      }
+
+      a {
+        display: inline-block;
+        color: $white;
+        font-family: $gilroy;
+        font-size: $text-size-m;
+        background-color: $blue-alt2;
+        box-shadow: $box-shadow-small;
+        border-radius: 8px;
+        padding: 1rem 2rem 1rem 2rem;
+
+        i {
+          color: $white;
+          margin-left: 1rem;
+        }
+
+        &:hover {
+          background-color: $blue;
+          box-shadow: none;
+        }
+
+        &:hover i {
+          color: $purple;
+        }
+      }
+    }
+
+    &__text {
+      @include flex($direction: column, $align: flex-start);
+      gap: 1rem;
+
+      span {
+        font-family: $gilroy;
+        font-weight: lighter;
+        color: $purple;
+
+        i {
+          margin-right: 1rem;
+        }
+      }
+
+      p {
+        max-width: 600px;
+        font-family: $hind;
+        font-size: $text-size-m;
+        line-height: 1.8rem;
+        color: $light-text;
+      }
+    }
+  }
+}

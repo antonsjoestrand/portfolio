@@ -1,0 +1,29 @@
+@import "../../sass/config";
+@import "../../sass/mixins";
+@import "../../sass/breakpoints";
+
+.close {
+  a {
+    display: inline-block;
+    color: $light-blue;
+    font-family: $gilroy;
+    font-size: $text-size;
+    border: 2px solid $light-blue;
+    border-radius: 8px;
+    padding: 0.56rem 1.2rem 0.56rem 1.2rem;
+    position: relative;
+    z-index: 1;
+    transition: $tr150;
+
+    &:hover {
+      color: $white;
+      background-color: $purple;
+      border: 2px solid $purple;
+    }
+
+    i {
+        vertical-align: middle;
+        margin-left: 8px;
+    }
+  }
+}

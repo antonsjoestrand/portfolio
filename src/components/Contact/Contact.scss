@@ -1,0 +1,144 @@
+@import "../../sass/config";
+@import "../../sass/mixins";
+@import "../../sass/breakpoints";
+
+.talk {
+  @include flex($align: flex-start);
+  padding: $section;
+
+  &__info {
+    position: relative;
+    @include flex($direction: column, $justify: flex-start, $align: flex-start);
+    gap: 3.5rem;
+    width: 25%;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 96%;
+      height: 2px;
+      background-color: $blue-alt1;
+      top: 57%;
+      left: 0;
+      transform: translateY(-50%);
+    }
+
+    &__title {
+      p {
+        font-family: $gilroy;
+        font-size: $h3;
+        line-height: 2.8rem;
+      }
+    }
+
+    &__contact {
+      @include flex($direction: column, $align: flex-start);
+      gap: 2.2rem;
+
+      ul {
+        list-style: none;
+        @include flex($direction: column, $align: flex-start);
+        gap: 1rem;
+
+        li {
+          font-family: $hind;
+          font-size: $text-size;
+          color: $light-text;
+
+          i {
+            color: $blue-alt3;
+            margin-right: 14px;
+            vertical-align: middle;
+          }
+        }
+      }
+    }
+  }
+
+  &__form {
+    width: 75%;
+    padding-left: 6.4rem;
+
+    .form {
+      @include flex(
+        $direction: column,
+        $justify: flex-start,
+        $align: flex-start
+      );
+      gap: 3.2rem;
+
+      &__group {
+        position: relative;
+        width: 100%;
+
+        input[type="text"],
+        textarea {
+          font-size: $text-size-m;
+          color: $white;
+          width: 100%;
+          background: none;
+          border: none;
+          outline: none;
+          border-bottom: 1px solid $blue-alt3;
+          padding-left: 5px;
+          transition: $tr150;
+
+          &:focus {
+            border-bottom: 1px solid $light-blue;
+          }
+        }
+
+        input {
+          height: 68px;
+        }
+
+        textarea {
+          width: 100%;
+          margin-top: 1.5rem;
+          resize: none;
+        }
+
+        ::placeholder {
+          color: $light-text;
+          opacity: 1;
+        }
+      }
+
+      label {
+        position: absolute;
+        top: -15px;
+        left: 5px;
+        width: 100%;
+        font-size: $text-size-s;
+        color: $light-blue;
+        opacity: 0;
+        transition: $tr150;
+      }
+
+      &__submit {
+        button {
+          width: auto;
+          height: auto;
+          display: inline-block;
+          border: none;
+          outline: none;
+          color: $white;
+          font-family: $gilroy;
+          font-size: $text-size;
+          background-color: $light-blue;
+          border-radius: 8px;
+          padding: 1rem 1.6rem 1rem 1.6rem;
+          position: relative;
+          z-index: 1;
+          transition: $tr150;
+          margin-top: 1.5rem;
+          cursor: pointer;
+          
+          &:hover {
+            background-color: $purple;
+          }
+        }
+      }
+    }
+  }
+}

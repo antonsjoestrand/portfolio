@@ -1,0 +1,103 @@
+@import "../../sass/config";
+@import "../../sass/mixins";
+@import "../../sass/breakpoints";
+
+.projects {
+  padding: $section;
+  padding-bottom: $section-bottom-big;
+
+  &__cards {
+    @include flex($direction: column);
+    gap: 4rem;
+
+    &__card {
+      @include flex($direction: column, $align: flex-start);
+      gap: 1.8rem;
+      width: 100%;
+      padding: 5.2rem;
+      box-shadow: $box-shadow;
+      border-radius: 40px;
+      overflow: hidden;
+
+      .cat-icon {
+        color: $white;
+        font-size: 5.2rem;
+      }
+
+      h4 {
+        font-family: $gilroy;
+        font-size: $h4;
+        font-weight: lighter;
+        color: $white;
+      }
+
+      p {
+        position: relative;
+        font-family: $hind;
+        font-size: $text-size-l;
+        color: rgba(255, 255, 255, 0.4);
+        transition: $tr400;
+
+        i {
+          position: absolute;
+          top: 48%;
+          transform: translateY(-50%);
+          right: -34px;
+          transition: right 400ms ease-in-out;
+        }
+      }
+
+      &:hover {
+        p {
+          color: $white;
+
+          i {
+            right: -42px;
+          }
+        }
+      }
+    }
+
+    &__small {
+        width: 100%;
+        @include flex($justify: space-between);
+        gap: 4rem;
+    }
+
+    .studies {
+      background: rgb(116, 70, 255);
+      background: linear-gradient(
+        130deg,
+        rgba(116, 70, 255, 1) 0%,
+        rgba(107, 68, 227, 1) 100%
+      );
+    }
+
+    .development {
+      background: rgb(0, 173, 255);
+      background: linear-gradient(
+        130deg,
+        rgba(0, 173, 255, 1) 0%,
+        rgba(19, 137, 226, 1) 100%
+      );
+    }
+
+    .design {
+      background: rgb(144, 63, 215);
+      background: linear-gradient(
+        130deg,
+        rgba(144, 63, 215, 1) 0%,
+        rgba(154, 85, 216, 1) 100%
+      );
+    }
+
+    .other {
+      background: rgb(48, 185, 131);
+      background: linear-gradient(
+        130deg,
+        rgba(48, 185, 131, 1) 0%,
+        rgba(0, 204, 124, 1) 100%
+      );
+    }
+  }
+}

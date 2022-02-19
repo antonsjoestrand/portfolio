@@ -1,0 +1,263 @@
+@import "../../sass/config";
+@import "../../sass/mixins";
+@import "../../sass/breakpoints";
+
+.skills {
+  .section__title {
+    padding-top: $section-top;
+  }
+
+  &__box {
+    @include flex($direction: column, $align: flex-start);
+    padding-bottom: $section-bottom-big;
+
+    .react-icons {
+      cursor: pointer;
+
+      &:hover {
+        color: $white !important;
+      }
+    }
+
+    #figma, #github, #wordpress, #nextjs {
+      font-weight: 500;
+      color: #fff !important;
+    }
+
+    .photoshop:hover, #photoshop {
+      font-weight: 500;
+      color: #31a8ff !important;
+    }
+
+    .illustrator:hover, #illustrator {
+      font-weight: 500;
+      color: #f79500 !important;
+    }
+
+    .indesign:hover, #indesign {
+      font-weight: 500;
+      color: #ff3366 !important;
+    }
+
+    .xd:hover, #xd {
+      font-weight: 500;
+      color: #f75eee !important;
+    }
+
+    .premiere:hover,
+    .aftereffects:hover, #premiere, #aftereffects {
+      font-weight: 500;
+      color: #9494f7 !important;
+    }
+
+    .sketch:hover, #sketch {
+      font-weight: 500;
+      color: #fdad00 !important;
+    }
+
+    .invision:hover, #invision {
+      font-weight: 500;
+      color: #ff3366 !important;
+    }
+
+    .affinity:hover, #affinity {
+      font-weight: 500;
+      color: #36b6f2 !important;
+    }
+
+    .framer:hover, #framer {
+      font-weight: 500;
+      color: #aa22ee !important;
+    }
+
+    .docker:hover, #docker {
+      font-weight: 500;
+      color: #2391e6 !important;
+    }
+
+    .mysql:hover, #mysql {
+      font-weight: 500;
+      color: #f79f15 !important;
+    }
+
+    .mongodb:hover, #mongodb {
+      font-weight: 500;
+      color: #4ca449 !important;
+    }
+
+    .npm:hover, #npm {
+      font-weight: 500;
+      color: #c53635 !important;
+    }
+
+    .html5:hover, #html5 {
+      font-weight: 500;
+      color: #e96228 !important;
+    }
+
+    .css3:hover, #css3 {
+      font-weight: 500;
+      color: #3594cf !important;
+    }
+
+    .javascript:hover, #javascript {
+      font-weight: 500;
+      color: #e9b824 !important;
+    }
+
+    .typescript:hover, #typescript {
+      font-weight: 500;
+      color: #2f74c0 !important;
+    }
+
+    .php:hover, #php {
+      font-weight: 500;
+      color: #7377ad !important;
+    }
+
+    .python:hover, #python {
+      font-weight: 500;
+      color: #3470a0 !important;
+    }
+
+    .sass:hover, #sass {
+      font-weight: 500;
+      color: #c66394 !important;
+    }
+
+    .bootstrap:hover, #bootstrap {
+      font-weight: 500;
+      color: #8311f6 !important;
+    }
+
+    .react:hover, #react {
+      font-weight: 500;
+      color: #5ed3f3 !important;
+    }
+
+    .jquery:hover, #jquery {
+      font-weight: 500;
+      color: #0865a6 !important;
+    }
+
+    .nodejs:hover, #nodejs {
+      font-weight: 500;
+      color: #77b260 !important;
+    }
+
+    .angular:hover, #angular {
+      font-weight: 500;
+      color: #d82d2f !important;
+    }
+
+    .laravel:hover, #laravel {
+      font-weight: 500;
+      color: #f7281b !important;
+    }
+
+    &__row {
+      width: 100%;
+      @include flex();
+
+      .box {
+        @include flex($direction: column);
+        gap: 1rem;
+        position: relative;
+        width: 33.33%;
+        padding: 4.6rem;
+
+        &__title {
+          position: absolute;
+          top: 0;
+          right: 0;
+
+          h5 {
+            color: $light-text;
+            font-family: $hind;
+            background-color: $blue-alt1;
+            padding: 0.5rem 1rem;
+            transition: $tr150;
+          }
+        }
+
+        &:hover h5 {
+          color: $white;
+        }
+
+        .row {
+          @include flex();
+          gap: 1rem;
+        }
+      }
+    }
+
+    .row1,
+    .row2 {
+      .box:nth-child(1) {
+        border-bottom: 2px solid $blue-alt1;
+        border-right: 2px solid $blue-alt1;
+      }
+
+      .box:nth-child(2) {
+        border-bottom: 2px solid $blue-alt1;
+        border-right: 2px solid $blue-alt1;
+      }
+
+      .box:nth-child(3) {
+        border-bottom: 2px solid $blue-alt1;
+        border-right: 2px solid $blue-alt1;
+      }
+
+      .box:nth-child(4) {
+        border-bottom: 2px solid $blue-alt1;
+      }
+    }
+
+    .row3 {
+      .box:nth-child(1) {
+        border-right: 2px solid $blue-alt1;
+      }
+
+      .box:nth-child(2) {
+        border-right: 2px solid $blue-alt1;
+      }
+
+      .box:nth-child(3) {
+        border-right: 2px solid $blue-alt1;
+      }
+    }
+  }
+}
+
+.modal {
+  @include flex();
+  padding: 3rem;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 86%;
+  border-radius: 14px 0 0 0;
+  background-color: $blue-alt1;
+  z-index: 1;
+  user-select: none;
+
+  button {
+    position: absolute;
+    background: none;
+    border: none;
+    top: 14px;
+    left: 20px;
+    font-size: $text-size-m;
+    color: $light-text;
+    cursor: pointer;
+  }
+
+  p {
+    font-family: $hind;
+    font-size: $text-size-s;
+    line-height: 1.24rem;
+    color: $light-text;
+    text-align: center;
+  }
+}

@@ -1,0 +1,81 @@
+@import "../../sass/config";
+@import "../../sass/mixins";
+@import "../../sass/breakpoints";
+
+.footer {
+  .section__title {
+    position: relative;
+    padding-top: $section-top;
+    align-items: center;
+    gap: 20rem;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 5988px;
+      height: 2px;
+      background-color: $blue-alt1;
+      top: 100%;
+      left: -5000px;
+      transform: translateY(-50%);
+    }
+
+    .text {
+      @include flex($direction: column, $align: flex-start);
+      gap: 1.6rem;
+
+      p {
+        max-width: 400px;
+      }
+    }
+  }
+
+  &__info {
+    position: relative;
+    padding: $section;
+    @include flex($direction: column, $align: flex-start);
+    gap: 6.4rem;
+
+    &__bg {
+      display: block;
+      position: absolute;
+      right: 174px;
+      bottom: -80px;
+      width: 520px;
+
+      .logo_bg {
+        fill: $blue-alt3;
+      }
+    }
+
+    &__contact {
+      @include flex($direction: column, $align: flex-start);
+      gap: 2.2rem;
+
+      ul {
+        list-style: none;
+        @include flex($direction: column, $align: flex-start);
+        gap: 1rem;
+
+        li {
+          font-family: $hind;
+          font-size: $text-size;
+          color: $light-text;
+
+          i {
+            color: $blue-alt3;
+            margin-right: 14px;
+            vertical-align: middle;
+          }
+        }
+      }
+    }
+
+    &__copy {
+      p {
+        color: $blue-alt3;
+        font-size: $text-size-s;
+      }
+    }
+  }
+}

@@ -1,0 +1,63 @@
+// ---- COLOR VARIABLES ----
+$dark-blue: #0e1a25;
+$blue: hsl(214, 44%, 15%);
+$blue-alt1: hsl(214, 44%, 18%);
+$blue-alt2: hsl(214, 44%, 21%);
+$blue-alt3: hsl(214, 44%, 24%);
+$purple: hsl(255, 100%, 64%);
+$light-purple: hsl(272, 66%, 55%);
+$light-blue: hsl(199, 100%, 50%);
+$green: hsl(156, 59%, 46%);
+$white: hsl(0, 0%, 100%);
+
+$light-text: rgba(136, 147, 170, 1);
+$dark-text: rgba(136, 147, 170, 0.5);
+$footer-text: rgba(136, 147, 170, 0.2);
+$box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.2);
+$box-shadow-right: -3px -3px 20px rgba(0, 0, 0, 0.2);
+$box-shadow-right-top: 0px -3px 20px rgba(0, 0, 0, 0.2);
+$box-shadow-small: 0px 0px 8px rgba(0, 0, 0, 0.08);
+
+// ---- FONT VARIABLES ----
+$gilroy: "Gilroy-SemiBold";
+$hind: "Hind Siliguri", sans-serif;
+$light-font: 400;
+$regular-font: 500;
+$bold-font: 700;
+$h1: 5rem;
+$h2: 4.2rem;
+$h3: 2rem;
+$h4: 3.2rem;
+$text-size-s: 0.84rem;
+$text-size: 1rem;
+$text-size-m: 1.2rem;
+$text-size-l: 1.4rem;
+$ls: 0.5px;
+$lh: 2.2rem;
+
+// ---- MARGIN & PADDING VARIABLES ----
+$header: 8rem 0 10rem 0;
+$section: 6.4rem 0;
+$section-bottom: 6.4rem;
+$section-bottom-big: 12.8rem;
+$section-top: 6.4rem;
+$mb-xl: 8rem;
+$card: 4rem;
+$mt-l: 4rem;
+$pb-l: 4rem;
+$mb-m: 2.5rem;
+$pb-m: 2.5rem;
+$mt-s: 2rem;
+$pt-s: 2rem;
+$pb-s: 2rem;
+$mb-xs: 1rem;
+$pb-xs: 1rem;
+$button-padding: 0.5rem 1rem;
+$frame-padding: 1rem 2rem;
+
+// ---- TRANSITION VARIABLES ----
+$tr150: all 150ms ease-in-out;
+$tr400: all 400ms ease-in-out;
+
+// ---- MIN COLUMN SIZE ----
+$col: 346px;
