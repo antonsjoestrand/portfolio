@@ -18,14 +18,14 @@ export default class Footer extends Component {
         <div className='wrapper'>
           <footer className='footer'>
             <motion.div
-              initial={{ opacity: 0, y: 50 }}
+              initial={{ opacity: 0, y: 100 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ type: "spring", bounce: 0.2, duration: 1.5 }}
+              transition={{ duration: 0.8 }}
               className='section__title'
             >
               <div className='text'>
-                <SectionTitle title='Connect With Me' />
+                <SectionTitle title='Connect With Me' color='#7547ff' />
                 <p>
                   I'm not afraid of a challenge. And I love creating brilliant
                   user experiences.
@@ -33,8 +33,9 @@ export default class Footer extends Component {
               </div>
               <motion.div whileHover={{ scale: 0.94, y: 6, x: 6 }}>
                 <motion.div
-                  initial={{ opacity: 0, scale: 0.84, y: 16, x: 16 }}
-                  whileInView={{ opacity: 1, scale: 1, y: 0, x: 0 }}
+                  initial={{ opacity: 0, scale: 0.84, y: 100 }}
+                  whileInView={{ opacity: 1, scale: 1, y: 0 }}
+                  viewport={{ once: true }}
                   transition={{
                     delay: 0.5,
                     type: "spring",

@@ -4,20 +4,12 @@
 
 .intro__footer {
   @include flex();
-  justify-content: space-between;
   padding-bottom: $section-bottom;
 
   @include media("<600px") {
     flex-direction: column;
     align-items: flex-start;
     gap: 2rem;
-  }
-
-  .line {
-    width: 109%;
-    height: 2px;
-    background-color: $footer-text;
-    margin-left: -273px;
   }
 
   .social {
@@ -27,21 +19,53 @@
     &__icons {
       @include flex($justify: flex-end);
       gap: 2rem;
+
+      @include media("<tablet") {
+        justify-content: flex-start;
+      }
     }
 
     &::before {
       content: "";
       position: absolute;
-      width: 5988px;
+      width: 5980px;
       height: 2px;
       background-color: $blue-alt1;
       top: 50%;
       left: -5000px;
       transform: translateY(-50%);
+
+      @include media("<1400px") {
+        width: 5940px;
+      }
+
+      @include media("<1300px") {
+        width: 5900px;
+      }
+
+      @include media("<1260px") {
+        width: 5840px;
+      }
+
+      @include media("<1200px") {
+        width: 5780px;
+      }
+
+      @include media("<1120px") {
+        width: 5720px;
+      }
+
+      @include media("<1060px") {
+        width: 5680px;
+      }
+
+      @include media("<tablet") {
+        display: none;
+      }
     }
 
     a {
-      font-size: 1.4rem;
+      font-size: $text-size-l;
       color: $light-text;
     }
 

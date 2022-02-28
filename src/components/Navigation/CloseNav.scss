@@ -8,17 +8,17 @@
     color: $light-blue;
     font-family: $gilroy;
     font-size: $text-size;
+    letter-spacing: $ls;
     border: 2px solid $light-blue;
     border-radius: 8px;
-    padding: 0.56rem 1.2rem 0.56rem 1.2rem;
+    padding: $button-padding-s;
     position: relative;
     z-index: 1;
     transition: $tr150;
 
     &:hover {
       color: $white;
-      background-color: $purple;
-      border: 2px solid $purple;
+      background-color: $light-blue;
     }
 
     i {

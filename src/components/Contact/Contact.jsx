@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { motion } from "framer-motion";
 import "../../sass/app.scss";
 import "./Contact.scss";
-import ContactNavigation from "../Navigation/ContactNavigation";
+import CloseNav from "../Navigation/CloseNav";
 
 export default function Contact() {
   useEffect(() => {
@@ -31,11 +31,11 @@ export default function Contact() {
       initial={{ x: -50, opacity: 0.5 }}
       whileInView={{ x: 0, opacity: 1 }}
       viewport={{ once: true }}
-      transition={{ type: "spring", bounce: 0.2, duration: 1 }}
+      transition={{ type: "spring", bounce: 0.2, duration: 0.8 }}
       className='container container--contact'
     >
       <div className='wrapper'>
-        <ContactNavigation />
+        <CloseNav />
         <section className='talk'>
           <div className='talk__info'>
             <div className='talk__info__title'>

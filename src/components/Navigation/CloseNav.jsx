@@ -1,10 +1,10 @@
 import "./Navigation.scss";
-import "./ContactNavigation.scss";
+import "./CloseNav.scss";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import Logo from './Logo';
 
-export default function ContactNavigation() {
+export default function CloseNav() {
   return (
     <nav className='navigation'>
       <ul className='navbar'>

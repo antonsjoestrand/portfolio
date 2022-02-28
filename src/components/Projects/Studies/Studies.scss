@@ -1,0 +1,16 @@
+@import "../../../sass/config";
+@import "../../../sass/mixins";
+@import "../../../sass/breakpoints";
+
+.zenx {
+    background-color: #202020;
+
+    .study-text {
+      color: #8c8c8c;
+    }
+
+    .zenx--img {
+      background-color: #181818;
+      @include bg($url: "../../../images/zenx_cover.png", $position: bottom);
+    }
+  }

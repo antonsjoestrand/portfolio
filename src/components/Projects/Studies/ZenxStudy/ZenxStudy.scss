@@ -1,0 +1,301 @@
+@import "../../../../sass/config";
+@import "../../../../sass/mixins";
+@import "../../../../sass/breakpoints";
+
+.zenx-study {
+  // ======== SECTION ========
+
+  .section {
+    @include flex($align: flex-start);
+    gap: $padding-xl;
+    padding: $section;
+  }
+
+  .section-space {
+    padding: $padding-m;
+  }
+
+  // ======== INTRO ========
+
+  .intro {
+    gap: $padding-m;
+    padding-bottom: 0;
+  }
+
+  // ======== TITLE ========
+
+  .title {
+    @include flex($direction: column, $align: flex-start);
+    gap: $padding-xs;
+    width: 40%;
+
+    h2 {
+      font-size: $h2;
+      color: $blue;
+
+      span {
+        color: $purple;
+      }
+    }
+
+    h3 {
+      max-width: 400px;
+      font-family: $gilroy;
+      font-size: $h3;
+      color: $light-text-alt;
+      line-height: 2.6rem;
+    }
+  }
+
+  // ======== STEP ========
+
+  .step {
+    @include flex();
+    min-width: 88px;
+    min-height: 35px;
+    font-family: $gilroy;
+    color: $white;
+    background-color: $light-text-alt;
+    border-radius: 80px;
+  }
+
+  // ======== TEXT ========
+
+  .text {
+    @include flex($direction: column, $align: flex-start);
+    gap: $padding-s;
+    width: 60%;
+
+    h4 {
+      @include purple-heading($weight: bold);
+    }
+
+    h4:nth-child(2) {
+      font-size: $h3;
+      color: $blue;
+      margin-top: -0.5rem;
+    }
+
+    p {
+      @include text-regular($color: $light-text-alt);
+    }
+
+    ul {
+      list-style: none;
+      @include flex($direction: column, $align: flex-start);
+      gap: 0.5rem;
+      padding-left: $padding-xs;
+    }
+
+    li {
+      @include text-regular();
+    }
+
+    li::before {
+      content: "\2022";
+      color: $purple;
+      font-weight: bold;
+      display: inline-block;
+      width: 1em;
+      margin-left: -1em;
+    }
+  }
+
+  // ======== ICON ========
+
+  .icon {
+    @include flex($direction: column);
+    gap: 2rem;
+    width: 20%;
+    padding-top: 6rem;
+  }
+
+  // ======== IMAGES ========
+
+  img {
+    border-radius: 20px;
+  }
+
+  .wide-image img {
+    width: 100%;
+    margin: $section;
+  }
+
+  // ======== LIST ========
+
+  .list {
+    @include flex($direction: column, $align: flex-start);
+    gap: $padding-s;
+    width: 40%;
+
+    h4 {
+      @include purple-heading($weight: bold);
+    }
+
+    ul {
+      list-style: none;
+      @include flex($direction: column, $align: flex-start);
+      gap: 0.5rem;
+      padding-left: $padding-xs;
+    }
+
+    li {
+      @include text-regular($color: $light-text-alt);
+    }
+
+    li::before {
+      content: "\2022";
+      color: $purple;
+      font-weight: bold;
+      display: inline-block;
+      width: 1em;
+      margin-left: -1em;
+    }
+  }
+
+  // ======== ROLE ========
+
+  .role {
+    background-color: $white-alt;
+    padding: 5rem;
+    border-radius: 20px;
+    margin-top: $padding-xl;
+  }
+
+  // ======== GOALS ========
+
+  .goals {
+    li {
+      color: $light-text-alt;
+    }
+  }
+
+  // ======== USER ========
+
+  .user {
+    padding-top: 0;
+
+    .icon {
+      padding-top: 6.5rem;
+    }
+  }
+
+  // ======== PERSONA ========
+
+  .persona {
+    @include flex($direction: column);
+    gap: 3rem;
+    background-color: $white-alt;
+    padding: 5rem;
+    border-radius: 20px;
+    .row {
+      @include flex();
+      gap: $padding-xl;
+    }
+
+    .text {
+      h4 {
+        font-size: $h3;
+        color: $purple;
+      }
+    }
+
+    .quote {
+      width: 40%;
+      p {
+        @include text-regular($color: $light-text-alt);
+        font-weight: bolder;
+        font-size: 2rem;
+        line-height: 2.8rem;
+      }
+    }
+
+    .list {
+      width: 50%;
+
+      i {
+        margin-right: 1rem;
+      }
+    }
+  }
+
+  .journey .icon {
+    padding-top: 4rem;
+  }
+
+  // ======== WIREFRAME ========
+
+  .wireframe {
+    padding-bottom: 0;
+
+    .bar1,
+    .bar2 {
+      width: 180px;
+      height: 100px;
+      border-radius: 10px;
+    }
+
+    .bar1 {
+      background-color: $light-text-alt;
+    }
+
+    .bar2 {
+      background-color: $purple;
+    }
+
+    .icon {
+      padding-top: 6.5rem;
+    }
+  }
+
+  // ======== SOLUTION ========
+
+  .solution {
+    padding: 0;
+
+    .icon {
+      padding-top: 11rem;
+    }
+  }
+
+  .small-image {
+    @include flex($justify: center);
+    padding-top: 0;
+    padding-bottom: $section-bottom;
+
+    .image {
+      @include flex($direction: column);
+      gap: 2.5rem;
+      width: 60%;
+
+      img {
+        width: 100%;
+        border-radius: 0;
+        margin: 0 auto;
+      }
+
+      p {
+        width: 88%;
+        @include text-regular($color: $light-text-alt);
+        font-weight: 600;
+        text-align: center;
+      }
+    }
+  }
+
+  // ======== CONCLUSION ========
+
+  .conclusion {
+    padding-top: 0;
+
+    p:nth-child(6) {
+      font-size: $text-size-l;
+      font-weight: 600;
+      color: $blue;
+    }
+
+    .cta {
+      margin-top: 3rem;
+    }
+  }
+}

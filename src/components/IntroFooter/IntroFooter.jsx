@@ -9,12 +9,12 @@ export default function IntroFooter() {
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ type: "spring", bounce: 0.2, duration: 1.5 }}
+          transition={{ duration: 0.8 }}
           className='social__icons'
         >
           <motion.a
             whileHover={{ scale: 1.2, rotate: -10 }}
-            href='https://www.linkedin.com/in/antonsj/'
+            href='https://www.linkedin.com/in/antonsj'
             target='_blank'
             rel='noreferrer'
             className='linkedin'

@@ -1,0 +1,48 @@
+@import "../../../sass/config";
+@import "../../../sass/mixins";
+@import "../../../sass/breakpoints";
+
+.maya {
+  background-color: $blue-alt1;
+
+  .maya--img {
+    background-color: #141414;
+    @include bg($url: "../../../images/maya_cover.png", $position: bottom);
+  }
+}
+
+.binx {
+  background-color: $blue-alt1;
+
+  .binx--img {
+    background-color: #24262b;
+    @include bg($url: "../../../images/binx_cover.png", $position: bottom);
+  }
+}
+
+.rds {
+  background-color: $blue-alt1;
+
+  .rds--img {
+    background-color: #131b24;
+    @include bg($url: "../../../images/rds_cover.png", $position: bottom);
+  }
+}
+
+.alencia {
+  background-color: $blue-alt1;
+
+  .alencia--img {
+    background-color: #10161a;
+    @include bg($url: "../../../images/alencia_cover.png", $position: bottom);
+  }
+}
+
+.elemetalarts {
+  background-color: $blue-alt1;
+
+  .elemetalarts--img {
+    background-color: #181818;
+    @include bg($url: "../../../images/elemetalarts_cover.png", $position: bottom);
+  }
+}

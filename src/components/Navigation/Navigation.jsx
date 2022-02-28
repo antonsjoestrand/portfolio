@@ -14,7 +14,7 @@ export default class Navigation extends Component {
   render() {
     const projects = () =>
       gsap.to(window, {
-        duration: 1,
+        duration: 0.8,
         ease: Circ.easeOut,
         scrollTo: {
           y: "#projects",
@@ -24,7 +24,7 @@ export default class Navigation extends Component {
 
     const skills = () =>
       gsap.to(window, {
-        duration: 1,
+        duration: 0.8,
         ease: Circ.easeOut,
         scrollTo: {
           y: "#skills",
@@ -58,22 +58,22 @@ export default class Navigation extends Component {
           <li>
             <Logo />
           </li>
-          <motion.li whileHover={{ scale: 1.2, rotate: -10 }}>
+          <motion.li className='nav' whileHover={{ scale: 1.2, rotate: -10 }}>
             <Link to='/' onClick={projects}>
               Projects
             </Link>
           </motion.li>
-          <motion.li whileHover={{ scale: 1.2, rotate: 10 }}>
+          <motion.li className='nav' whileHover={{ scale: 1.2, rotate: 10 }}>
             <Link to='/' onClick={skills}>
               Skills
             </Link>
           </motion.li>
-          <motion.li whileHover={{ scale: 1.2, rotate: -10 }}>
+          <motion.li className='nav' whileHover={{ scale: 1.2, rotate: -10 }}>
             <Link to='/' onClick={about}>
               About
             </Link>
           </motion.li>
-          <motion.li whileHover={{ scale: 1.2, rotate: 10 }}>
+          <motion.li className='nav' whileHover={{ scale: 1.2, rotate: 10 }}>
             <Link to='/' onClick={testimonials}>
               Testimonials
             </Link>

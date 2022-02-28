@@ -27,6 +27,7 @@
       p {
         font-family: $gilroy;
         font-size: $h3;
+        letter-spacing: $ls;
         line-height: 2.8rem;
       }
     }
@@ -38,7 +39,7 @@
       ul {
         list-style: none;
         @include flex($direction: column, $align: flex-start);
-        gap: 1rem;
+        gap: $padding-xs;
 
         li {
           font-family: $hind;

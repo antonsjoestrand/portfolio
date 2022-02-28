@@ -1,0 +1,14 @@
+@import "../../../sass/config";
+@import "../../../sass/mixins";
+@import "../../../sass/breakpoints";
+
+.design-page {
+  height: calc(100vh - 182.4px);
+  @include flex($direction: column);
+
+  .soon {
+    font-family: $gilroy;
+    font-size: 6rem;
+    color: $blue-alt3;
+  }
+}

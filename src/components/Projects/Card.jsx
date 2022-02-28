@@ -17,8 +17,12 @@ export default class Card extends Component {
   }
 
   render() {
+    const scrollTop = () => {
+      window.scrollTo(0, 0);
+    };
+
     return (
-      <Link data-tilt to='/' className={this.props.name}>
+      <Link data-tilt to={this.props.to} onClick={scrollTop} className={this.props.name}>
         <i className={this.props.icon}></i>
         <h4>{this.props.title}</h4>
         <p>

@@ -12,17 +12,45 @@
     &::before {
       content: "";
       position: absolute;
-      width: 5988px;
+      width: 5980px;
       height: 2px;
       background-color: $blue-alt1;
       top: 100%;
       left: -5000px;
       transform: translateY(-50%);
+
+      @include media("<1400px") {
+        width: 5940px;
+      }
+
+      @include media("<1300px") {
+        width: 5900px;
+      }
+
+      @include media("<1260px") {
+        width: 5840px;
+      }
+
+      @include media("<1200px") {
+        width: 5780px;
+      }
+
+      @include media("<1120px") {
+        width: 5720px;
+      }
+
+      @include media("<1060px") {
+        width: 5680px;
+      }
+
+      @include media("<tablet") {
+        display: none;
+      }
     }
 
     .text {
       @include flex($direction: column, $align: flex-start);
-      gap: 1.6rem;
+      gap: $padding-s;
 
       p {
         max-width: 400px;
@@ -46,16 +74,20 @@
       .logo_bg {
         fill: $blue-alt3;
       }
+
+      @include media("<1200px") {
+        display: none;
+      }
     }
 
     &__contact {
       @include flex($direction: column, $align: flex-start);
-      gap: 2.2rem;
+      gap: $padding-m;
 
       ul {
         list-style: none;
         @include flex($direction: column, $align: flex-start);
-        gap: 1rem;
+        gap: $padding-xs;
 
         li {
           font-family: $hind;
@@ -73,6 +105,7 @@
 
     &__copy {
       p {
+        font-family: $hind;
         color: $blue-alt3;
         font-size: $text-size-s;
       }

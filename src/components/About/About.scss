@@ -34,9 +34,13 @@
     gap: 4.8rem;
     padding-bottom: $section-bottom-big;
 
+    @include media("<tablet") {
+      flex-direction: column;
+    }
+
     &__profile {
       @include flex($direction: column, $align: flex-start);
-      gap: 1rem;
+      gap: $padding-xs;
 
       .image {
         width: 240.467px;
@@ -56,7 +60,7 @@
         background-color: $blue-alt2;
         box-shadow: $box-shadow-small;
         border-radius: 8px;
-        padding: 1rem 2rem 1rem 2rem;
+        padding: $button-padding-m;
 
         i {
           color: $white;
@@ -76,7 +80,7 @@
 
     &__text {
       @include flex($direction: column, $align: flex-start);
-      gap: 1rem;
+      gap: $padding-xs;
 
       span {
         font-family: $gilroy;
@@ -90,10 +94,7 @@
 
       p {
         max-width: 600px;
-        font-family: $hind;
-        font-size: $text-size-m;
-        line-height: 1.8rem;
-        color: $light-text;
+        @include text-regular();
       }
     }
   }

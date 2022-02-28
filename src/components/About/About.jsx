@@ -9,14 +9,14 @@ export default function About() {
       <div className='wrapper'>
         <section className='about'>
           <motion.div
-            initial={{ opacity: 0, y: 50 }}
+            initial={{ opacity: 0, y: 100 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ type: "spring", bounce: 0.2, duration: 1.5 }}
+            transition={{ duration: 0.8 }}
             className='section__title'
             id='about'
           >
-            <SectionTitle title='About Me' />
+            <SectionTitle title='About Me' color='#7547ff' />
             <div className='social'>
               <motion.a
                 whileHover={{ scale: 1.2, rotate: -10 }}
@@ -48,10 +48,10 @@ export default function About() {
             </div>
           </motion.div>
           <motion.div
-            initial={{ opacity: 0, y: 50 }}
+            initial={{ opacity: 0, y: 100 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
-            transition={{ type: "spring", bounce: 0.2, duration: 1.5 }}
+            transition={{ duration: 0.8 }}
             className='about__info'
           >
             <div className='about__info__profile'>

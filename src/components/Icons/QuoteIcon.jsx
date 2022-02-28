@@ -1,4 +1,4 @@
-export default function QuoteIcon({ name }) {
+export default function QuoteIcon({ name, color }) {
     return (
       <svg
         className={name}
@@ -6,7 +6,7 @@ export default function QuoteIcon({ name }) {
         width={6.981}
         height={23.043}
       >
-        <g data-name='Group 23' opacity={1} fill='#7547ff'>
+        <g data-name='Group 23' opacity={1} fill={color}>
           <path
             data-name='Path 77'
             d='M5.868 5.325a2.983 2.983 0 0 1-2.219.93 2.916 2.916 0 0 1-2.2-.93 3.127 3.127 0 0 1-.887-2.24A3.006 3.006 0 0 1 1.449.908a2.951 2.951 0 0 1 2.2-.909 3.02 3.02 0 0 1 2.219.909 2.97 2.97 0 0 1 .908 2.177 3.088 3.088 0 0 1-.908 2.24'

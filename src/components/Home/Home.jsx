@@ -71,7 +71,7 @@ export default class Home extends Component {
 
     const projects = () =>
       gsap.to(window, {
-        duration: 1,
+        duration: 0.8,
         ease: Circ.easeOut,
         scrollTo: {
           y: "#projects",
@@ -84,7 +84,7 @@ export default class Home extends Component {
         initial={{ opacity: 0.5 }}
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
-        transition={{ type: "spring", bounce: 0.2, duration: 1 }}
+        transition={{ type: "spring", bounce: 0.2, duration: 0.8 }}
       >
         <div className='container container--hero'>
           <div className='wrapper'>
@@ -123,6 +123,7 @@ export default class Home extends Component {
                       );
                     })}
                   </h2>
+                  <h2 className="tablet-title">Anton Sjöstrand</h2>
                   <p>
                     <motion.span
                       initial={{ opacity: 0 }}
@@ -149,8 +150,8 @@ export default class Home extends Component {
                 </motion.div>
                 <motion.div whileHover={{ scale: 0.94, y: 6, x: 6 }}>
                   <motion.div
-                    initial={{ opacity: 0, scale: 0.84, y: 16, x: 16 }}
-                    animate={{ opacity: 1, scale: 1, y: 0, x: 0 }}
+                    initial={{ opacity: 0, scale: 0.84, y: 50 }}
+                    animate={{ opacity: 1, scale: 1, y: 0 }}
                     transition={{
                       delay: 7.4,
                       type: "spring",
@@ -188,10 +189,10 @@ export default class Home extends Component {
         <Testimonials />
 
         <motion.div
-          initial={{ y: 50, opacity: 0.5 }}
+          initial={{ y: 100, opacity: 0.5 }}
           whileInView={{ y: 0, opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ type: "spring", bounce: 0.2, duration: 1 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ type: "spring", bounce: 0.4, duration: 0.8 }}
         >
           <Footer />
         </motion.div>

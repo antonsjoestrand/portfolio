@@ -10,7 +10,7 @@ export default function Testimonials() {
   const [toggleCard3, setToggleCard3] = useState(false);
 
   const [text, setText] = useState({
-    name: "Aysha Samrin",
+    name: "John Doe",
     testimonial:
       "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Inventore, corrupti, nam temporibus illo sed exercitationem molestias omnis at fuga quos perspiciatis culpa similique reprehenderit, blanditiis sint non laboriosam. Sit nostrum deserunt corporis perspiciatis? Rerum error, nam reiciendis id, cumque vel sit libero adipisci repellat ipsa quidem. Sequi itaque et modi sed beatae qui perspiciatis voluptas sapiente? Quae adipisci aut tenetur minus inventore. Perspiciatis quisquam saepe officiis enim magni dicta illum harum sunt.",
   });
@@ -37,7 +37,7 @@ export default function Testimonials() {
   const selectTestimonial1 = () => {
     select(toggleCard1, setToggleCard1, setToggleCard2, setToggleCard3);
     setText({
-      name: "Aysha Samrin",
+      name: "John Doe",
       testimonial:
         "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Inventore, corrupti, nam temporibus illo sed exercitationem molestias omnis at fuga quos perspiciatis culpa similique reprehenderit, blanditiis sint non laboriosam. Sit nostrum deserunt corporis perspiciatis? Rerum error, nam reiciendis id, cumque vel sit libero adipisci repellat ipsa quidem. Sequi itaque et modi sed beatae qui perspiciatis voluptas sapiente? Quae adipisci aut tenetur minus inventore. Perspiciatis quisquam saepe officiis enim magni dicta illum harum sunt.",
     });
@@ -46,7 +46,7 @@ export default function Testimonials() {
   const selectTestimonial2 = () => {
     select(toggleCard2, setToggleCard2, setToggleCard1, setToggleCard3);
     setText({
-      name: "Thomas Girard",
+      name: "John Doe",
       testimonial:
         "Ipsum dolor sit, amet consectetur adipisicing elit. Inventore, corrupti, nam temporibus illo sed exercitationem molestias omnis at fuga quos perspiciatis culpa similique reprehenderit, blanditiis sint non laboriosam. Sit nostrum deserunt corporis perspiciatis? Rerum error, nam reiciendis id, cumque vel sit libero adipisci repellat ipsa quidem. Sequi itaque et modi sed beatae qui perspiciatis voluptas sapiente? Quae adipisci aut tenetur minus inventore. Perspiciatis quisquam saepe officiis enim magni dicta illum harum sunt.",
     });
@@ -55,7 +55,7 @@ export default function Testimonials() {
   const selectTestimonial3 = () => {
     select(toggleCard3, setToggleCard3, setToggleCard1, setToggleCard2);
     setText({
-      name: "Patrick Sauriol",
+      name: "John Doe",
       testimonial:
         "Dolor sit, amet consectetur adipisicing elit. Inventore, corrupti, nam temporibus illo sed exercitationem molestias omnis at fuga quos perspiciatis culpa similique reprehenderit, blanditiis sint non laboriosam. Sit nostrum deserunt corporis perspiciatis? Rerum error, nam reiciendis id, cumque vel sit libero adipisci repellat ipsa quidem. Sequi itaque et modi sed beatae qui perspiciatis voluptas sapiente? Quae adipisci aut tenetur minus inventore. Perspiciatis quisquam saepe officiis enim magni dicta illum harum sunt.",
     });
@@ -66,20 +66,20 @@ export default function Testimonials() {
       <div className='wrapper'>
         <section className='testimonials'>
           <motion.div
-            initial={{ opacity: 0, y: 50 }}
+            initial={{ opacity: 0, y: 100 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ type: "spring", bounce: 0.2, duration: 1.5 }}
+            transition={{ duration: 0.8 }}
             className='section__title'
-            id="testimonials"
+            id='testimonials'
           >
-            <SectionTitle title='Testimonials' />
+            <SectionTitle title='Testimonials' color='#7547ff' />
           </motion.div>
           <motion.div
-            initial={{ opacity: 0, y: 50 }}
+            initial={{ opacity: 0, y: 100 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
-            transition={{ type: "spring", bounce: 0.2, duration: 1.5 }}
+            transition={{ duration: 0.8 }}
             className='testimonials__content'
           >
             <div className='testimonials__content__name'>
@@ -93,8 +93,8 @@ export default function Testimonials() {
                   <i className='fa-solid fa-pen-to-square'></i>
                 </div>
                 <div className='card__user'>
-                  <h4>Aysha Samrin</h4>
-                  <p>Product Designer</p>
+                  <h4>John Doe</h4>
+                  <p>Job title</p>
                 </div>
               </motion.div>
               <motion.div
@@ -107,8 +107,8 @@ export default function Testimonials() {
                   <i className='fa-solid fa-pen-to-square'></i>
                 </div>
                 <div className='card__user'>
-                  <h4>Thomas Girard</h4>
-                  <p>Design Scholar</p>
+                  <h4>John Doe</h4>
+                  <p>Job title</p>
                 </div>
               </motion.div>
               <motion.div
@@ -121,8 +121,8 @@ export default function Testimonials() {
                   <i className='fa-solid fa-pen-to-square'></i>
                 </div>
                 <div className='card__user'>
-                  <h4>Patrick Sauriol</h4>
-                  <p>Marketing Expert</p>
+                  <h4>John Doe</h4>
+                  <p>Job title</p>
                 </div>
               </motion.div>
             </div>

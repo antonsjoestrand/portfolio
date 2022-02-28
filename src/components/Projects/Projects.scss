@@ -19,6 +19,10 @@
       border-radius: 40px;
       overflow: hidden;
 
+      @include media("<tablet") {
+        padding: 3.4rem;
+      }
+
       .cat-icon {
         color: $white;
         font-size: 5.2rem;
@@ -29,6 +33,10 @@
         font-size: $h4;
         font-weight: lighter;
         color: $white;
+
+        @include media("<tablet") {
+          font-size: $h3;
+        }
       }
 
       p {
@@ -37,6 +45,10 @@
         font-size: $text-size-l;
         color: rgba(255, 255, 255, 0.4);
         transition: $tr400;
+
+        @include media("<tablet") {
+          color: rgba(255, 255, 255, 0.8);
+        }
 
         i {
           position: absolute;
@@ -59,12 +71,16 @@
     }
 
     &__small {
-        width: 100%;
-        @include flex($justify: space-between);
-        gap: 4rem;
+      width: 100%;
+      @include flex($justify: space-between);
+      gap: 4rem;
+
+      @include media("<tablet") {
+          flex-direction: column;
+        }
     }
 
-    .studies {
+    .card--case-studies {
       background: rgb(116, 70, 255);
       background: linear-gradient(
         130deg,
@@ -73,7 +89,7 @@
       );
     }
 
-    .development {
+    .card--development {
       background: rgb(0, 173, 255);
       background: linear-gradient(
         130deg,
@@ -82,7 +98,7 @@
       );
     }
 
-    .design {
+    .card--design {
       background: rgb(144, 63, 215);
       background: linear-gradient(
         130deg,
@@ -91,13 +107,203 @@
       );
     }
 
-    .other {
+    .card--other {
       background: rgb(48, 185, 131);
       background: linear-gradient(
         130deg,
         rgba(48, 185, 131, 1) 0%,
         rgba(0, 204, 124, 1) 100%
       );
+    }
+  }
+}
+
+.category-nav {
+  @include flex($align: flex-start, $justify: flex-start);
+  gap: $padding-xs;
+  padding-bottom: $section-bottom;
+}
+
+.category {
+  display: inline-block;
+  color: $white;
+  font-family: $gilroy;
+  font-size: $text-size;
+  letter-spacing: $ls;
+  border-radius: 8px;
+  padding: $button-padding-s;
+  position: relative;
+  z-index: 1;
+  transition: $tr150;
+
+  i {
+    margin-left: 16px;
+    transition: $tr150;
+  }
+}
+
+.case-studies {
+  background-color: $purple;
+  border: 2px solid $purple;
+
+  &:hover {
+    background: none;
+    color: $purple;
+
+    i {
+      color: $purple;
+    }
+  }
+}
+
+.development {
+  background-color: $light-blue;
+  border: 2px solid $light-blue;
+
+  &:hover {
+    background: none;
+    color: $light-blue;
+
+    i {
+      color: $light-blue;
+    }
+  }
+}
+
+.design {
+  background-color: $light-purple;
+  border: 2px solid $light-purple;
+
+  &:hover {
+    background: none;
+    color: $light-purple;
+
+    i {
+      color: $light-purple;
+    }
+  }
+}
+
+.other {
+  background-color: $green;
+  border: 2px solid $green;
+
+  &:hover {
+    background: none;
+    color: $green;
+
+    i {
+      color: $green;
+    }
+  }
+}
+
+.projects-page {
+  padding-bottom: $section-bottom;
+
+  .section__title {
+    padding-top: $section-top;
+    padding-bottom: $padding-m;
+  }
+
+  &__cards {
+    @include flex($direction: column);
+    gap: 4rem;
+
+    .project-card {
+      width: 100%;
+    }
+
+    &__card {
+      @include flex();
+      width: 100%;
+      box-shadow: $box-shadow;
+      border-radius: 40px;
+
+      .text {
+        @include flex($direction: column, $align: flex-start);
+        gap: $padding-m;
+        width: 50%;
+        border-radius: 40px 0 0 40px;
+        padding-left: 5.2rem;
+
+        img {
+          width: 200px;
+        }
+
+        .study-text {
+          max-width: 300px;
+          font-family: $gilroy;
+          font-size: $text-size-l;
+          line-height: 2rem;
+        }
+
+        .dev-title {
+          max-width: 300px;
+          font-family: $gilroy;
+          font-size: $h3;
+          letter-spacing: $ls-l;
+          color: $light-blue;
+        }
+
+        .labels {
+          @include flex();
+          gap: 0.6rem;
+          margin-top: -1rem;
+
+          button {
+            font-family: $hind;
+            font-size: $text-size-s;
+            background-color: $blue;
+            border: none;
+            padding: $button-padding-xs;
+            border-radius: 4px;
+            color: $light-text;
+          }
+        }
+
+        .dev-text {
+          max-width: 400px;
+          @include text-regular();
+        }
+
+        .links {
+          @include flex();
+          gap: 1.6rem;
+
+          a {
+            font-family: $gilroy;
+            color: $white;
+            border-radius: 8px;
+          }
+
+          a:nth-child(1) {
+            background-color: $light-blue;
+            padding: $button-padding-s;
+            transition: background 150ms ease-in-out;
+
+            &:hover {
+              background-color: $purple;
+            }
+          }
+
+          a:nth-child(2) {
+            font-size: $text-size-l;
+            color: $light-text;
+
+            &:hover {
+              color: $white;
+            }
+          }
+        }
+      }
+
+      .image {
+        width: 50%;
+        min-height: 390px;
+        border-radius: 0 40px 40px 0;
+        clip-path: polygon(0 0, 100% 0%, 100% 100%, 15% 100%);
+      }
     }
   }
 }

@@ -22,14 +22,14 @@ export default function Skills() {
       <div className='wrapper'>
         <section className='skills'>
           <motion.div
-            initial={{ opacity: 0, y: 50 }}
+            initial={{ opacity: 0, y: 100 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ type: "spring", bounce: 0.2, duration: 1.5 }}
+            transition={{ duration: 0.8 }}
             className='section__title'
             id='skills'
           >
-            <SectionTitle title='My Skillset' />
+            <SectionTitle title='My Skillset' color='#7547ff' />
             <p>
               My first love and passion is design. I fell in love with front-end
               development because it gives me the ability to bring my ideas and
@@ -45,10 +45,10 @@ export default function Skills() {
               }}
             >
               <motion.div
-                initial={{ opacity: 0, y: 50 }}
+                initial={{ opacity: 0, y: 100 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ type: "spring", bounce: 0.2, duration: 1.5 }}
+                transition={{ duration: 0.8 }}
                 className='skills__box__row row1'
               >
                 <div className='box'>
@@ -85,10 +85,10 @@ export default function Skills() {
               }}
             >
               <motion.div
-                initial={{ opacity: 0, y: 50 }}
+                initial={{ opacity: 0, y: 100 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ type: "spring", bounce: 0.2, duration: 1.5 }}
+                transition={{ duration: 0.8 }}
                 className='skills__box__row row2'
               >
                 <div className='box'>
@@ -117,10 +117,10 @@ export default function Skills() {
                 </div>
               </motion.div>
               <motion.div
-                initial={{ opacity: 0, y: 50 }}
+                initial={{ opacity: 0, y: 100 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ type: "spring", bounce: 0.2, duration: 1.5 }}
+                transition={{ duration: 0.8 }}
                 className='skills__box__row row3'
               >
                 <div className='box'>

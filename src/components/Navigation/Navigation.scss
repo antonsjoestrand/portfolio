@@ -5,6 +5,10 @@
 .navigation {
   padding-top: 3.2rem;
 
+  @include media("<tablet") {
+    padding-top: 2rem;
+  }
+
   @include flex($justify: space-between);
 
   .navbar {
@@ -19,10 +23,17 @@
         font-size: $text-size;
         color: $light-text;
         transition: $tr150;
+        letter-spacing: $ls;
 
         &:hover {
           color: $purple;
         }
+      }
+    }
+
+    .nav {
+      @include media("<tablet") {
+        display: none;
       }
     }
   }
@@ -33,9 +44,10 @@
       color: $white;
       font-family: $gilroy;
       font-size: $text-size;
+      letter-spacing: $ls;
       background-color: $light-blue;
       border-radius: 8px;
-      padding: 0.56rem 1.2rem 0.56rem 1.2rem;
+      padding: $button-padding-s;
       position: relative;
       z-index: 1;
       transition: $tr150;

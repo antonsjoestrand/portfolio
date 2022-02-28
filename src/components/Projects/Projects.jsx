@@ -10,31 +10,32 @@ export default function Projects() {
       <div className='wrapper'>
         <section className='projects'>
           <motion.div
-            initial={{ opacity: 0, y: 50 }}
+            initial={{ opacity: 0, y: 100 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ type: "spring", bounce: 0.2, duration: 1.5 }}
+            transition={{ duration: 0.8 }}
             className='section__title'
-            id="projects"
+            id='projects'
           >
-            <SectionTitle title='My Projects' />
+            <SectionTitle title='My Projects' color='#7547ff' />
             <p>I design for the experience with a touch of brilliance.</p>
           </motion.div>
           <motion.div
             initial={{ opacity: 0, y: 100, scale: 0.9 }}
             whileInView={{ opacity: 1, y: 0, scale: 1 }}
             viewport={{ once: true, margin: "-100px" }}
-            transition={{ type: "spring", bounce: 0.2, duration: 1.5 }}
+            transition={{ type: "spring", bounce: 0.4, duration: 1.5 }}
             className='projects__cards'
           >
             <Card
-              name='projects__cards__card studies'
+              to='/case-studies'
+              name='projects__cards__card card--case-studies'
               icon='fa-solid fa-file-lines cat-icon'
               title='Case Studies'
             />
-
             <Card
-              name='projects__cards__card development'
+              to='/development'
+              name='projects__cards__card card--development'
               icon='fa-solid fa-browser cat-icon'
               title='Development'
             />
@@ -42,16 +43,18 @@ export default function Projects() {
               initial={{ opacity: 0, y: 100, scale: 0.9 }}
               whileInView={{ opacity: 1, y: 0, scale: 1 }}
               viewport={{ once: true, margin: "-100px" }}
-              transition={{ type: "spring", bounce: 0.2, duration: 1.5 }}
+              transition={{ type: "spring", bounce: 0.4, duration: 1.5 }}
               className='projects__cards__small'
             >
               <Card
-                name='projects__cards__card design'
+                to='/design'
+                name='projects__cards__card card--design'
                 icon='fa-solid fa-pen-ruler cat-icon'
                 title='Design'
               />
               <Card
-                name='projects__cards__card other'
+                to='/other'
+                name='projects__cards__card card--other'
                 icon='fa-solid fa-lightbulb cat-icon'
                 title='Other'
               />
