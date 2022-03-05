@@ -3,14 +3,31 @@
 @import "../../../sass/breakpoints";
 
 .zenx {
-    background-color: #202020;
+  background-color: #202020;
 
-    .study-text {
-      color: #8c8c8c;
-    }
-
-    .zenx--img {
-      background-color: #181818;
-      @include bg($url: "../../../images/zenx_cover.png", $position: bottom);
-    }
+  .study-text {
+    color: #8c8c8c;
   }
+
+  .zenx--img {
+    background-color: #181818;
+    @include bg($url: "../../../images/zenx_cover.png", $position: bottom);
+  }
+}
+
+.twd {
+  background-color: #fafafa;
+
+  .brand {
+    width: 300px;
+  }
+
+  .study-text {
+    color: #1c1c1c;
+  }
+
+  .twd--img {
+    background-color: #ffffff;
+    @include bg($url: "../../../images/twd_cover.png", $position: bottom);
+  }
+}

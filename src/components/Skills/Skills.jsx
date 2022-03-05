@@ -1,7 +1,6 @@
 import "../../sass/app.scss";
 import "./Skills.scss";
 import { IconContext } from "react-icons";
-import { motion } from "framer-motion";
 import SectionTitle from "../Title/SectionTitle";
 import Adobe from "./Sections/Adobe";
 import Design from "./Sections/Design";
@@ -21,21 +20,14 @@ export default function Skills() {
     <div className='container container--skills'>
       <div className='wrapper'>
         <section className='skills'>
-          <motion.div
-            initial={{ opacity: 0, y: 100 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-            className='section__title'
-            id='skills'
-          >
+          <div className='section__title' id='skills'>
             <SectionTitle title='My Skillset' color='#7547ff' />
             <p>
               My first love and passion is design. I fell in love with front-end
               development because it gives me the ability to bring my ideas and
               concepts to life.
             </p>
-          </motion.div>
+          </div>
           <div className='skills__box'>
             <IconContext.Provider
               value={{
@@ -44,13 +36,7 @@ export default function Skills() {
                 color: "rgba(136, 147, 170, 1)",
               }}
             >
-              <motion.div
-                initial={{ opacity: 0, y: 100 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.8 }}
-                className='skills__box__row row1'
-              >
+              <div className='skills__box__row row1'>
                 <div className='box'>
                   <div className='box__title'>
                     <h5>Adobe</h5>
@@ -75,7 +61,7 @@ export default function Skills() {
                   </div>
                   <Languages />
                 </div>
-              </motion.div>
+              </div>
             </IconContext.Provider>
             <IconContext.Provider
               value={{
@@ -84,13 +70,7 @@ export default function Skills() {
                 color: "rgba(136, 147, 170, 1)",
               }}
             >
-              <motion.div
-                initial={{ opacity: 0, y: 100 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.8 }}
-                className='skills__box__row row2'
-              >
+              <div className='skills__box__row row2'>
                 <div className='box'>
                   <div className='box__title'>
                     <h5>Sass</h5>
@@ -115,14 +95,8 @@ export default function Skills() {
                   </div>
                   <JquerySkill />
                 </div>
-              </motion.div>
-              <motion.div
-                initial={{ opacity: 0, y: 100 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.8 }}
-                className='skills__box__row row3'
-              >
+              </div>
+              <div className='skills__box__row row3'>
                 <div className='box'>
                   <div className='box__title'>
                     <h5>Node.js</h5>
@@ -147,7 +121,7 @@ export default function Skills() {
                   </div>
                   <LaravelSkill />
                 </div>
-              </motion.div>
+              </div>
             </IconContext.Provider>
           </div>
         </section>

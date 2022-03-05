@@ -17,15 +17,9 @@ export default class Footer extends Component {
       <div className='container container--footer'>
         <div className='wrapper'>
           <footer className='footer'>
-            <motion.div
-              initial={{ opacity: 0, y: 100 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8 }}
-              className='section__title'
-            >
+            <div className='section__title'>
               <div className='text'>
-                <SectionTitle title='Connect With Me' color='#7547ff' />
+                <SectionTitle title='Contact Me' color='#7547ff' />
                 <p>
                   I'm not afraid of a challenge. And I love creating brilliant
                   user experiences.
@@ -37,7 +31,7 @@ export default class Footer extends Component {
                   whileInView={{ opacity: 1, scale: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{
-                    delay: 0.5,
+                    delay: 1,
                     type: "spring",
                     bounce: 0.6,
                     duration: 1.5,
@@ -56,7 +50,19 @@ export default class Footer extends Component {
                   </Link>
                 </motion.div>
               </motion.div>
-            </motion.div>
+              <div className='tablet-cta'>
+                <Link
+                  to='/contact'
+                  onClick={scrollTop}
+                  className='cta contact--cta tablet-cta'
+                >
+                  Let's Talk
+                  <span className='arrow'>
+                    <i className='fa-solid fa-angle-right'></i>
+                  </span>
+                </Link>
+              </div>
+            </div>
             <div className='footer__info'>
               <div className='footer__info__bg'>
                 <LogoBackground />

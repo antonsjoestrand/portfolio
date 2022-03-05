@@ -19,11 +19,8 @@
 
     li {
       a {
-        font-family: $gilroy;
-        font-size: $text-size;
-        color: $light-text;
+        @include text-nav();
         transition: $tr150;
-        letter-spacing: $ls;
 
         &:hover {
           color: $purple;
@@ -40,11 +37,8 @@
 
   .contact {
     a {
+      @include button-small();
       display: inline-block;
-      color: $white;
-      font-family: $gilroy;
-      font-size: $text-size;
-      letter-spacing: $ls;
       background-color: $light-blue;
       border-radius: 8px;
       padding: $button-padding-s;

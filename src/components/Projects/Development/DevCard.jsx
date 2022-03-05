@@ -1,7 +1,15 @@
 import "../../../sass/app.scss";
 import { motion } from "framer-motion";
 
-export default function StudyCard({ name, title, labels, text, view, github, image }) {
+export default function StudyCard({
+  name,
+  title,
+  labels,
+  text,
+  view,
+  github,
+  image,
+}) {
   return (
     <motion.div
       initial={{ opacity: 0, y: 100, scale: 0.9 }}
@@ -16,10 +24,14 @@ export default function StudyCard({ name, title, labels, text, view, github, ima
           {labels}
           <p className='dev-text'>{text}</p>
           <div className='links'>
-            <motion.a whileHover={{ scale: 0.96 }} href={view}>
+            <motion.a whileHover={{ scale: 0.96 }} target='_blank' href={view}>
               Demo
             </motion.a>
-            <motion.a whileHover={{ scale: 1.2, rotate: -10 }} href={github}>
+            <motion.a
+              whileHover={{ scale: 1.2, rotate: -10 }}
+              target='_blank'
+              href={github}
+            >
               <i className='fa-brands fa-github'></i>
             </motion.a>
           </div>

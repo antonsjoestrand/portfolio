@@ -1,4 +1,5 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
+import emailjs from "emailjs-com";
 import { motion } from "framer-motion";
 import "../../sass/app.scss";
 import "./Contact.scss";
@@ -25,6 +26,33 @@ export default function Contact() {
     revealLabel(email, emailLabel);
     revealLabel(message, messageLabel);
   }, []);
+
+  const [msgSuccess, setMsgSuccess] = useState(false);
+  const [msgError, setMsgError] = useState(false);
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_mryfo99",
+        "template_282hnrh",
+        e.target,
+        "user_I38gaMwaYFWjSz5rGgvEw"
+      )
+      .then(
+        () => {
+          window.scrollTo(0, 0);
+          setMsgSuccess(true);
+        },
+        (error) => {
+          console.log(error);
+          window.scrollTo(0, 0);
+          setMsgError(true);
+        }
+      );
+    e.target.reset();
+  };
 
   return (
     <motion.div
@@ -54,7 +82,17 @@ export default function Contact() {
             </div>
           </div>
           <div className='talk__form'>
-            <form className='form'>
+            {msgSuccess && (
+              <div className='message-success'>
+                <p>Thank you! I'll get back to you as soon as I can.</p>
+              </div>
+            )}
+            {msgError && (
+              <div className='message-error'>
+                <p>Sorry, something went wrong! Please try again.</p>
+              </div>
+            )}
+            <form onSubmit={sendEmail} autocomplete='off' className='form'>
               <div className='form__group'>
                 <input
                   id='name'
@@ -62,6 +100,7 @@ export default function Contact() {
                   type='text'
                   placeholder="What's Your Name?"
                   required
+                  autocomplete='off'
                 />
                 <label id='name_label'>Your Name</label>
               </div>
@@ -69,9 +108,10 @@ export default function Contact() {
                 <input
                   id='email'
                   name='email'
-                  type='text'
+                  type='email'
                   placeholder="What's Your Email?"
                   required
+                  autocomplete='off'
                 />
                 <label id='email_label'>Your Email</label>
               </div>
@@ -87,9 +127,7 @@ export default function Contact() {
                 <label id='message_label'>Message</label>
               </div>
               <motion.div whileHover={{ scale: 0.96 }} className='form__submit'>
-                <button>
-                  Send Message
-                </button>
+                <button>Send Message</button>
               </motion.div>
             </form>
           </div>

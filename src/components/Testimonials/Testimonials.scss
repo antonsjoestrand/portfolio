@@ -37,16 +37,13 @@
         }
 
         h4 {
-          font-family: $gilroy;
+          @include title-xs();
           font-weight: lighter;
-          color: $light-text;
           margin-bottom: 0.4rem;
         }
 
         p {
-          font-family: $hind;
-          color: $light-text;
-          font-size: $text-size-s;
+          @include text-xs();
         }
       }
 
@@ -71,9 +68,7 @@
       gap: $padding-xs;
 
       h4 {
-        font-family: $gilroy;
-        font-size: $text-size-m;
-        font-weight: lighter;
+        @include text-highlight($color: $white);
       }
 
       p {

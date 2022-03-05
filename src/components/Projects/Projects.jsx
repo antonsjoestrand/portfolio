@@ -6,7 +6,7 @@ import SectionTitle from "../Title/SectionTitle";
 
 export default function Projects() {
   return (
-    <div className='container container--projects'>
+    <div className='container'>
       <div className='wrapper'>
         <section className='projects'>
           <motion.div

@@ -6,12 +6,6 @@
   @include flex();
   padding-bottom: $section-bottom;
 
-  @include media("<600px") {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 2rem;
-  }
-
   .social {
     position: relative;
     width: 100%;

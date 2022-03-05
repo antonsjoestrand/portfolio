@@ -1,9 +1,34 @@
 // ---- TEXT STYLING ----
-@mixin text-regular($color: $light-text) {
-  font-family: $hind;
-  font-size: $text-size-m;
-  font-weight: 400;
-  line-height: 1.92rem;
+@mixin title-h2($color: $white) {
+  font-family: $gilroy;
+  font-size: $h2;
+  color: $color;
+  letter-spacing: $ls;
+  line-height: 5.8rem;
+}
+
+@mixin title-h3($family: $gilroy, $color: $white) {
+  font-family: $family;
+  font-size: $h3;
+  color: $color;
+  letter-spacing: $ls-l;
+  line-height: 2.8rem;
+}
+
+@mixin title-h4($color: $white) {
+  font-family: $gilroy;
+  font-size: $h4;
+  color: $color;
+}
+
+@mixin title-small() {
+  font-family: $gilroy;
+  font-size: $text-size-l;
+  line-height: 2rem;
+}
+
+@mixin title-xs($color: $light-text) {
+  font-family: $gilroy;
   color: $color;
 }
 
@@ -14,37 +39,57 @@
   color: $color;
 }
 
-// ---- BUTTON STYLING ----
-@mixin cta() {
-  a {
-    font-family: $cat;
-    font-size: $cta-size;
-    font-weight: 500;
-    letter-spacing: $ls;
-    text-transform: uppercase;
-    color: $white;
-    border-bottom: 2px solid $green;
+@mixin text-nav() {
+  font-family: $gilroy;
+  font-size: $text-size-s;
+  color: $light-text;
+  letter-spacing: $ls;
+}
 
-    &:hover {
-      color: $light-paragraph;
-    }
-  }
+@mixin text-large($color: $light-text) {
+  font-family: $hind;
+  font-size: $text-size-l;
+  color: $color;
+}
 
-  i {
-    font-size: 1.2rem;
-    color: $green;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    right: -30px;
-    opacity: 0;
-  }
+@mixin text-regular($color: $light-text) {
+  font-family: $hind;
+  font-size: $text-size-m;
+  font-weight: 400;
+  line-height: 1.92rem;
+  color: $color;
+}
 
-  a:hover + i {
-    opacity: 1;
-    right: -40px;
-    transition: 200ms all ease-in-out;
-  }
+@mixin text-small($color: $light-text) {
+  font-family: $hind;
+  font-size: $text-size-s;
+  color: $color;
+}
+
+@mixin text-highlight($color: $purple) {
+  font-family: $gilroy;
+  font-size: $text-size-m;
+  color: $color;
+}
+
+@mixin text-xs($color: $light-text) {
+  font-family: $hind;
+  font-size: $text-size-xs;
+  color: $color;
+}
+
+@mixin button-regular($color: $white) {
+  font-family: $gilroy;
+  font-size: $text-size-m;
+  color: $color;
+  letter-spacing: $ls;
+}
+
+@mixin button-small($color: $white) {
+  font-family: $gilroy;
+  font-size: $text-size-s;
+  color: $color;
+  letter-spacing: $ls;
 }
 
 // ---- BACKGROUND STYLING ----

@@ -123,7 +123,7 @@ export default class Home extends Component {
                       );
                     })}
                   </h2>
-                  <h2 className="tablet-title">Anton Sjöstrand</h2>
+                  <h2 className='tablet-title'>Anton Sjöstrand</h2>
                   <p>
                     <motion.span
                       initial={{ opacity: 0 }}
@@ -146,6 +146,10 @@ export default class Home extends Component {
                     >
                       Developer
                     </motion.span>
+                  </p>
+                  <p className='tablet-paragraph'>
+                    <span>UI/UX Designer</span> <span>&</span>{" "}
+                    <span>Developer</span>
                   </p>
                 </motion.div>
                 <motion.div whileHover={{ scale: 0.94, y: 6, x: 6 }}>
@@ -171,6 +175,18 @@ export default class Home extends Component {
                     </Link>
                   </motion.div>
                 </motion.div>
+                <div className='tablet-cta'>
+                  <Link
+                    to='/'
+                    onClick={projects}
+                    className='cta projects--cta tablet-cta'
+                  >
+                    See My Projects
+                    <span className='arrow'>
+                      <i className='fa-solid fa-angle-right'></i>
+                    </span>
+                  </Link>
+                </div>
               </section>
               <section className='elements'>
                 <Elements />
@@ -182,17 +198,38 @@ export default class Home extends Component {
 
         <Projects />
 
-        <Skills />
-
-        <About />
-
-        <Testimonials />
-
         <motion.div
-          initial={{ y: 100, opacity: 0.5 }}
+          initial={{ y: 100, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           viewport={{ once: true, margin: "-100px" }}
-          transition={{ type: "spring", bounce: 0.4, duration: 0.8 }}
+          transition={{ type: "spring", bounce: 0.4, duration: 1.5 }}
+        >
+          <Skills />
+        </motion.div>
+
+        <motion.div
+          initial={{ y: 100, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ type: "spring", bounce: 0.4, duration: 1.5 }}
+        >
+          <About />
+        </motion.div>
+
+        <motion.div
+          initial={{ y: 100, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ type: "spring", bounce: 0.4, duration: 1.5 }}
+        >
+          <Testimonials />
+        </motion.div>
+
+        <motion.div
+          initial={{ y: 100, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ type: "spring", bounce: 0.4, duration: 1.5 }}
         >
           <Footer />
         </motion.div>

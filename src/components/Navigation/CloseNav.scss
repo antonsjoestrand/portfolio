@@ -4,11 +4,8 @@
 
 .close {
   a {
+    @include button-small($color: $light-blue);
     display: inline-block;
-    color: $light-blue;
-    font-family: $gilroy;
-    font-size: $text-size;
-    letter-spacing: $ls;
     border: 2px solid $light-blue;
     border-radius: 8px;
     padding: $button-padding-s;

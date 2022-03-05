@@ -8,14 +8,7 @@ export default function About() {
     <div className='container container--about'>
       <div className='wrapper'>
         <section className='about'>
-          <motion.div
-            initial={{ opacity: 0, y: 100 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-            className='section__title'
-            id='about'
-          >
+          <div className='section__title' id='about'>
             <SectionTitle title='About Me' color='#7547ff' />
             <div className='social'>
               <motion.a
@@ -46,20 +39,15 @@ export default function About() {
                 <i className='fa-brands fa-github'></i>
               </motion.a>
             </div>
-          </motion.div>
-          <motion.div
-            initial={{ opacity: 0, y: 100 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 0.8 }}
-            className='about__info'
-          >
+          </div>
+          <div className='about__info'>
             <div className='about__info__profile'>
               <div className='image'></div>
               <motion.a
                 whileHover={{ scale: 0.94 }}
                 whileTap={{ scale: 1.05 }}
-                href='#'
+                target='_blank'
+                href='https://drive.google.com/file/d/1ZU3_Gf7SmtKV9Uvvhgr-_ydA1pM_O7a-/view'
               >
                 See My Resume
                 <i className='fa-regular fa-arrow-down-to-bracket'></i>
@@ -86,7 +74,7 @@ export default function About() {
                 listening to a podcast or watching a good TV-Show.
               </p>
             </div>
-          </motion.div>
+          </div>
         </section>
       </div>
     </div>

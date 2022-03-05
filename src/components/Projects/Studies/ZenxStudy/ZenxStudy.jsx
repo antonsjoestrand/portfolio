@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { gsap, Power2 } from "gsap";
-import "./ZenxStudy.scss";
+import "../Study.scss";
 import ProjectNav from "../../ProjectNav";
 import Category from "../../Category";
 import ZenxWide from "./images/zenx-wide.png";
@@ -54,7 +54,7 @@ export default function ZenxStudy() {
             />
           }
         />
-        <section className='zenx-study'>
+        <section className='study'>
           <div className='section intro'>
             <div className='title'>
               <h2>
@@ -63,7 +63,7 @@ export default function ZenxStudy() {
               <h3>Freelance solution for projects and payments</h3>
             </div>
             <div className='text'>
-              <h4>The Challenge</h4>
+              <h4>Challenge</h4>
               <p>
                 Managing multiple clients and projects is a part of running a
                 business as a freelancer. However, sometimes clients don't pay
@@ -95,7 +95,7 @@ export default function ZenxStudy() {
             <div className='list'>
               <h4>What I Did</h4>
               <ul>
-                <li>Competitive analysis</li>
+                <li>Competitive research</li>
                 <li>User research</li>
                 <li>Ideation & concept</li>
                 <li>Interaction design</li>
@@ -114,8 +114,8 @@ export default function ZenxStudy() {
           >
             <div className='step'>STEP 1</div>
             <div className='text'>
-              <h4>The Goals</h4>
-              <h4>Finding the best solution</h4>
+              <h4>Kickoff</h4>
+              <h4>Finding the Best Solution</h4>
               <p>
                 Before I started doing research on the existing solutions and
                 common pain points among freelancers, I started off by making
@@ -135,6 +135,7 @@ export default function ZenxStudy() {
                 wanted my application to be very easy to use while still
                 maintaining all the important features.
               </p>
+              <p className='bold'>Focus points</p>
               <ul>
                 <li>Make it fast and easy to use</li>
                 <li>Make it desktop & mobile friendly</li>
@@ -181,8 +182,8 @@ export default function ZenxStudy() {
           >
             <div className='step'>STEP 2</div>
             <div className='text'>
-              <h4>The User</h4>
-              <h4>Creating a story</h4>
+              <h4>Persona</h4>
+              <h4>Creating a Story</h4>
               <p>
                 In order for the design to work, I needed to define what kind of
                 user would be the foundation of my solution. I combined all the
@@ -274,8 +275,8 @@ export default function ZenxStudy() {
           >
             <div className='step'>STEP 3</div>
             <div className='text'>
-              <h4>The Wireframe</h4>
-              <h4>Achieving configurability</h4>
+              <h4>Wireframing</h4>
+              <h4>Achieving Configurability</h4>
               <p>
                 After asking some questions to a few freelancers and looking at
                 reviews of competing apps, I found that there are varied
@@ -338,8 +339,8 @@ export default function ZenxStudy() {
           >
             <div className='step'>STEP 4</div>
             <div className='text'>
-              <h4>The Design</h4>
-              <h4>Designing the solution</h4>
+              <h4>Mockup</h4>
+              <h4>Designing the Solution</h4>
               <p>
                 I wanted the app to have a personality and to be easy on the
                 eyes, so I settled with dark colors and a blue accent color as
@@ -481,8 +482,8 @@ export default function ZenxStudy() {
           >
             <div className='step'>STEP 5</div>
             <div className='text'>
-              <h4>The Conclusion</h4>
-              <h4>Leveraging what I learned</h4>
+              <h4>Conclusion</h4>
+              <h4>Leveraging What I Learned</h4>
               <p>
                 In order to make a solution like this go from good to great, we
                 need to make sure that it's not too complex. What do we need to
@@ -506,7 +507,7 @@ export default function ZenxStudy() {
                 would ease freelancers frustration of managing their projects
                 and payments in a satisfactory manner.
               </p>
-              <p>Thank you!</p>
+              <p className='thanks'>Thank you!</p>
               <motion.div whileHover={{ scale: 0.94, y: 6, x: 6 }}>
                 <motion.div
                   initial={{ opacity: 0, scale: 0.84, y: 50 }}

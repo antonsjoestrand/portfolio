@@ -9,6 +9,15 @@
     align-items: center;
     gap: 20rem;
 
+    @include media("<1200px") {
+      gap: 10rem;
+    }
+
+    @include media("<tablet") {
+      gap: 2rem;
+      align-items: flex-start;
+    }
+
     &::before {
       content: "";
       position: absolute;
@@ -59,10 +68,14 @@
   }
 
   &__info {
+    @include flex($direction: column, $align: flex-start);
     position: relative;
     padding: $section;
-    @include flex($direction: column, $align: flex-start);
     gap: 6.4rem;
+
+    @include media("<tablet") {
+      padding-top: 0;
+    }
 
     &__bg {
       display: block;
@@ -90,9 +103,7 @@
         gap: $padding-xs;
 
         li {
-          font-family: $hind;
-          font-size: $text-size;
-          color: $light-text;
+          @include text-small();
 
           i {
             color: $blue-alt3;
@@ -105,9 +116,7 @@
 
     &__copy {
       p {
-        font-family: $hind;
-        color: $blue-alt3;
-        font-size: $text-size-s;
+        @include text-xs($color: $blue-alt3);
       }
     }
   }

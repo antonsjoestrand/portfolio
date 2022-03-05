@@ -6,11 +6,20 @@
   @include flex($align: flex-start);
   padding: $section;
 
+  @include media("<tablet") {
+    flex-direction: column;
+    gap: 6.4rem;
+  }
+
   &__info {
     position: relative;
     @include flex($direction: column, $justify: flex-start, $align: flex-start);
     gap: 3.5rem;
     width: 25%;
+
+    @include media("<tablet") {
+      width: 100%;
+    }
 
     &::before {
       content: "";
@@ -25,10 +34,7 @@
 
     &__title {
       p {
-        font-family: $gilroy;
-        font-size: $h3;
-        letter-spacing: $ls;
-        line-height: 2.8rem;
+        @include title-h3();
       }
     }
 
@@ -42,9 +48,7 @@
         gap: $padding-xs;
 
         li {
-          font-family: $hind;
-          font-size: $text-size;
-          color: $light-text;
+          @include text-small();
 
           i {
             color: $blue-alt3;
@@ -60,6 +64,30 @@
     width: 75%;
     padding-left: 6.4rem;
 
+    @include media("<tablet") {
+      width: 100%;
+      padding-left: 0;
+    }
+
+    .message-success,
+    .message-error {
+      padding: 1rem 2rem;
+      border-radius: 8px;
+      margin-bottom: 3rem;
+
+      p {
+        @include text-regular($color: $white);
+      }
+    }
+
+    .message-success {
+      background-color: $purple;
+    }
+
+    .message-error {
+      background-color: $red;
+    }
+
     .form {
       @include flex(
         $direction: column,
@@ -72,10 +100,19 @@
         position: relative;
         width: 100%;
 
+        input:-webkit-autofill,
+        input:-webkit-autofill:hover,
+        input:-webkit-autofill:focus,
+        input:-webkit-autofill:active {
+          box-shadow: 0 0 0 100px $blue inset;
+          -webkit-box-shadow: 0 0 0 100px $blue inset;
+          -webkit-text-fill-color: $white
+        }
+
         input[type="text"],
+        input[type="email"],
         textarea {
-          font-size: $text-size-m;
-          color: $white;
+          @include text-regular($color: $white);
           width: 100%;
           background: none;
           border: none;
@@ -106,26 +143,23 @@
       }
 
       label {
+        @include text-xs($color: $light-blue);
         position: absolute;
         top: -15px;
         left: 5px;
         width: 100%;
-        font-size: $text-size-s;
-        color: $light-blue;
         opacity: 0;
         transition: $tr150;
       }
 
       &__submit {
         button {
+          @include button-small();
           width: auto;
           height: auto;
           display: inline-block;
           border: none;
           outline: none;
-          color: $white;
-          font-family: $gilroy;
-          font-size: $text-size;
           background-color: $light-blue;
           border-radius: 8px;
           padding: 1rem 1.6rem 1rem 1.6rem;
@@ -134,7 +168,7 @@
           transition: $tr150;
           margin-top: 1.5rem;
           cursor: pointer;
-          
+
           &:hover {
             background-color: $purple;
           }

@@ -10,6 +10,7 @@ import Home from "./components/Home/Home";
 import Contact from "./components/Contact/Contact";
 import Studies from "./components/Projects/Studies/Studies";
 import ZenxStudy from "./components/Projects/Studies/ZenxStudy/ZenxStudy";
+import TwdStudy from "./components/Projects/Studies/TwdStudy/TwdStudy";
 import Development from "./components/Projects/Development/Development";
 import Design from "./components/Projects/Design/Design";
 import Other from "./components/Projects/Other/Other";
@@ -36,6 +37,7 @@ function App() {
             <Route path='/contact' element={<Contact />} />
             <Route path='/case-studies' element={<Studies />} />
             <Route path='/case-studies/zenx-study' element={<ZenxStudy />} />
+            <Route path='/case-studies/twd-study' element={<TwdStudy />} />
             <Route path='/development' element={<Development />} />
             <Route path='/design' element={<Design />} />
             <Route path='/other' element={<Other />} />

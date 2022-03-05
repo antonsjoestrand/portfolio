@@ -125,10 +125,6 @@
   background-color: $blue;
 }
 
-.container--projects {
-  background-color: $dark-blue;
-}
-
 .container--study {
   background-color: $white;
 }
@@ -192,11 +188,7 @@
       }
 
       h2 {
-        color: $white;
-        font-family: $gilroy;
-        font-size: $h2;
-        line-height: 5.8rem;
-        letter-spacing: $ls;
+        @include title-h2();
 
         span {
           display: inline-block;
@@ -221,11 +213,12 @@
       }
 
       p {
-        font-family: $hind;
+        @include title-h3($family: $hind, $color: $light-text);
         font-weight: 300;
-        font-size: $h3;
-        line-height: 2.8rem;
-        color: $light-text;
+
+        @include media("<tablet") {
+          display: none;
+        }
 
         span {
           display: inline-block;
@@ -233,6 +226,14 @@
 
         span:nth-child(2) {
           color: $purple;
+        }
+      }
+
+      .tablet-paragraph {
+        display: none;
+
+        @include media("<tablet") {
+          display: block;
         }
       }
     }
@@ -254,16 +255,17 @@
 }
 
 .cta {
+  @include button-regular();
   display: inline-block;
-  color: $white;
-  font-family: $gilroy;
-  font-size: $text-size-m;
-  letter-spacing: $ls;
   border-radius: 8px;
   padding: $button-padding-cta;
   position: relative;
   transition: $tr150;
   z-index: 1;
+
+  @include media("<tablet") {
+    display: none;
+  }
 
   &::before {
     content: "";
@@ -299,6 +301,14 @@
   }
 }
 
+.tablet-cta {
+  display: none;
+
+  @include media("<tablet") {
+    display: block;
+  }
+}
+
 .projects--cta {
   background-color: $purple;
   margin-bottom: 20px;
@@ -320,10 +330,6 @@
   background-color: $light-blue;
   margin-bottom: 8px;
 
-  @include media("<tablet") {
-      display: none;
-    }
-
   &::before {
     outline: 1px solid $light-blue;
   }
@@ -344,22 +350,27 @@
 
   @include media("<tablet") {
     flex-direction: column;
+    gap: 1.4rem;
   }
 
   .title {
     @include flex($align: flex-start);
     gap: 0.6rem;
   }
+
   svg {
     width: 8px;
   }
 
   h3 {
-    font-family: $gilroy;
-    font-size: $h3;
-    letter-spacing: $ls-l;
+    @include title-h3();
+    line-height: 2.4rem;
     margin-right: 4rem;
     margin-top: -0.5rem;
+
+    @include media("<tablet") {
+      margin-right: 0;
+    }
   }
 
   p {

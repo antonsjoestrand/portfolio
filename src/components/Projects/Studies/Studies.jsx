@@ -6,7 +6,8 @@ import CloseNav from "../../Navigation/CloseNav";
 import SectionTitle from "../../Title/SectionTitle";
 import Category from "../Category";
 import StudyCard from "./StudyCard";
-import Zenx from "../../../images/zenx.png";
+import Zenx from "./ZenxStudy/images/zenx.png";
+import Twd from "./TwdStudy/images/twd.png";
 
 export default function Studies() {
   return (
@@ -43,7 +44,7 @@ export default function Studies() {
               icon='fa-solid fa-lightbulb'
             />
           </nav>
-          
+
           <div className='projects-page__cards'>
             <StudyCard
               to='/case-studies/zenx-study'
@@ -51,6 +52,14 @@ export default function Studies() {
               logo={Zenx}
               text='Freelance solution for projects and payments'
               image='image zenx--img'
+            />
+
+            <StudyCard
+              to='/case-studies/twd-study'
+              name='projects-page__cards__card twd'
+              logo={Twd}
+              text='Business solution for The Walking Dead fan site & wiki'
+              image='image twd--img'
             />
           </div>
         </section>
