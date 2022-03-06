@@ -23,6 +23,10 @@
         padding: 3.4rem;
       }
 
+      @include media("<phone") {
+        border-radius: 28px;
+      }
+
       .cat-icon {
         color: $white;
         font-size: 5.2rem;
@@ -216,6 +220,10 @@
       box-shadow: $box-shadow;
       border-radius: 40px;
 
+      @include media("<phone") {
+        border-radius: 28px;
+      }
+
       .text {
         @include flex($direction: column, $align: flex-start);
         gap: $padding-m;
@@ -240,6 +248,10 @@
         .dev-title {
           @include title-h3($color: $light-blue);
           max-width: 300px;
+
+          @include media("<580px") {
+            font-size: $text-size-l;
+          }
         }
 
         .labels {

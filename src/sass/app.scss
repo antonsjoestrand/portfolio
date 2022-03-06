@@ -65,6 +65,10 @@
   background-color: $blue;
   border-radius: 0 0 80px 0;
   box-shadow: $box-shadow;
+
+  @include media("<phone") {
+    border-radius: 0 0 40px 0;
+  }
 }
 
 .container--skills::before {
@@ -73,6 +77,10 @@
   box-shadow: $box-shadow-right-top;
   border-radius: 80px 0 0 0;
   height: 2200px;
+
+  @include media("<phone") {
+    border-radius: 40px 0 0 0;
+  }
 }
 
 .container--about::before {
@@ -88,6 +96,10 @@
   border-radius: 80px 0 0 0;
   height: 2200px;
   z-index: -5;
+
+  @include media("<phone") {
+    border-radius: 40px 0 0 0;
+  }
 }
 
 .container--testimonials::before {
@@ -103,6 +115,10 @@
   border-radius: 80px 0 0 0;
   height: 2200px;
   z-index: -3;
+
+  @include media("<phone") {
+    border-radius: 40px 0 0 0;
+  }
 }
 
 .container--footer::before {
@@ -118,6 +134,10 @@
   border-radius: 0 80px 0 0;
   height: 2200px;
   z-index: -2;
+
+  @include media("<phone") {
+    border-radius: 0 40px 0 0;
+  }
 }
 
 .container--contact,

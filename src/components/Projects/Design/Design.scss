@@ -2,13 +2,116 @@
 @import "../../../sass/mixins";
 @import "../../../sass/breakpoints";
 
-.design-page {
-  height: calc(100vh - 182.4px);
-  @include flex($direction: column);
+.products {
+  @include flex($direction: column, $align: flex-start);
+  gap: $padding-xl;
 
-  .soon {
-    font-family: $gilroy;
-    font-size: 6rem;
-    color: $blue-alt3;
+  &__section {
+    width: 100%;
+    @include flex($direction: column, $align: flex-start);
+  }
+
+  .product-title {
+    margin-bottom: 2rem;
+
+    h4 {
+      @include title-h3();
+
+      span:nth-child(1) {
+        color: $light-purple;
+      }
+
+      span:nth-child(2) {
+        color: $light-text;
+      }
+    }
+
+    @include media("<580px") {
+      margin-bottom: 1.4rem;
+
+      h4 {
+        font-size: $text-size-l;
+      }
+    }
+  }
+
+  .product-images {
+    width: 100%;
+    @include flex($direction: row, $align: center);
+    gap: 10px;
+
+    @include media("<tablet") {
+      flex-direction: column;
+    }
+  }
+
+  .primary-product-container {
+    width: 80%;
+    height: 680px;
+    position: relative;
+
+    @include media("<tablet") {
+      width: 100%;
+      height: 600px;
+      flex-direction: column;
+    }
+
+    @include media("<800px") {
+      height: 500px;
+    }
+
+    @include media("<700px") {
+      height: 400px;
+    }
+
+    @include media("<580px") {
+      height: 320px;
+    }
+
+    @include media("<phone") {
+      height: 260px;
+    }
+  }
+
+  .primary-product-image {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 40px;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    @include media("<phone") {
+      border-radius: 28px;
+    }
+  }
+
+  .product-gallery {
+    width: 20%;
+    @include flex($direction: column, $justify: flex-end, $align: auto);
+    gap: 10px;
+    height: 680px;
+    z-index: 1;
+
+    @include media("<tablet") {
+      width: 100%;
+      height: 100px;
+      flex-direction: row;
+      justify-content: flex-start;
+    }
+
+    @include media("<580px") {
+      height: 68px;
+    }
+  }
+
+  .related-product-image {
+    border-radius: 14px;
+    cursor: pointer;
+
+    @include media("<phone") {
+      border-radius: 8px;
+    }
   }
 }

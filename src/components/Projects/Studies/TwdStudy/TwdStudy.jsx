@@ -14,6 +14,10 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 
 export default function ZenxStudy() {
+  const scrollTop = () => {
+    window.scrollTo(0, 0);
+  };
+
   useEffect(() => {
     let tla = gsap.timeline({ repeat: -1 });
 
@@ -36,7 +40,7 @@ export default function ZenxStudy() {
       initial={{ opacity: 0.5 }}
       whileInView={{ opacity: 1 }}
       viewport={{ once: true }}
-      transition={{ type: "spring", bounce: 0.2, duration: 0.8 }}
+      transition={{ duration: 0.8 }}
       className='container container--study'
     >
       <div className='wrapper'>
@@ -472,7 +476,7 @@ export default function ZenxStudy() {
                     duration: 1.5,
                   }}
                 >
-                  <Link to='/case-studies' className='cta projects--cta'>
+                  <Link to='/case-studies' onClick={scrollTop} className='cta projects--cta'>
                     See More Studies
                     <span className='arrow'>
                       <i className='fa-solid fa-angle-right'></i>
@@ -483,8 +487,6 @@ export default function ZenxStudy() {
             </div>
             <div className='icon'></div>
           </motion.div>
-
-          <div className='section-space'></div>
         </section>
       </div>
     </motion.div>

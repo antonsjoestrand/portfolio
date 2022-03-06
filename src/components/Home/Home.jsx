@@ -84,7 +84,7 @@ export default class Home extends Component {
         initial={{ opacity: 0.5 }}
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
-        transition={{ type: "spring", bounce: 0.2, duration: 0.8 }}
+        transition={{ duration: 0.8 }}
       >
         <div className='container container--hero'>
           <div className='wrapper'>
