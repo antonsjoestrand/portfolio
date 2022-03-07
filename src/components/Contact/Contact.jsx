@@ -92,7 +92,7 @@ export default function Contact() {
                 <p>Sorry, something went wrong! Please try again.</p>
               </div>
             )}
-            <form onSubmit={sendEmail} autocomplete='off' className='form'>
+            <form onSubmit={sendEmail} autoComplete='off' className='form'>
               <div className='form__group'>
                 <input
                   id='name'
@@ -100,7 +100,7 @@ export default function Contact() {
                   type='text'
                   placeholder="What's Your Name?"
                   required
-                  autocomplete='off'
+                  autoComplete='off'
                 />
                 <label id='name_label'>Your Name</label>
               </div>
@@ -111,7 +111,7 @@ export default function Contact() {
                   type='email'
                   placeholder="What's Your Email?"
                   required
-                  autocomplete='off'
+                  autoComplete='off'
                 />
                 <label id='email_label'>Your Email</label>
               </div>

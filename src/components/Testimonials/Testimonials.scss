@@ -13,6 +13,7 @@
     padding-bottom: $section-bottom-big;
 
     @include media("<tablet") {
+      height: auto;
       flex-direction: column;
     }
 

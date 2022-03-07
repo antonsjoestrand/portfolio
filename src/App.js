@@ -16,7 +16,7 @@ import Design from "./components/Projects/Design/Design";
 import Other from "./components/Projects/Other/Other";
 import Loading from "./components/Loading/Loading";
 
-function App() {
+const App = () => {
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {

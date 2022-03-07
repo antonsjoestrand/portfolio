@@ -1,8 +1,12 @@
 {
   "files": {
-    "main.css": "/static/css/main.1adb030b.css",
-    "main.js": "/static/js/main.2ad60d6c.js",
+    "main.css": "/static/css/main.8827cfa0.css",
+    "main.js": "/static/js/main.f8dfbbb4.js",
     "static/js/787.1ed0c42c.chunk.js": "/static/js/787.1ed0c42c.chunk.js",
+    "static/media/resume.mp4": "/static/media/resume.2359ea4c9005589cb10f.mp4",
+    "static/media/disaster.png": "/static/media/disaster.58314227e266db27872f.png",
+    "static/media/cleanup.png": "/static/media/cleanup.052a1274386eca5c7321.png",
+    "static/media/jesse.png": "/static/media/jesse.b28b05816f5a443de2b3.png",
     "static/media/2.png": "/static/media/2.fdfaa989014867016a79.png",
     "static/media/alencia_cover.png": "/static/media/alencia_cover.9de5f1987d3c83ca01aa.png",
     "static/media/twd-wide-2.png": "/static/media/twd-wide-2.4658c4f3640c275dc6a8.png",
@@ -33,12 +37,12 @@
     "static/media/logo.svg": "/static/media/logo.0ad3944ef3fe87b70a8d.svg",
     "static/media/logo-alt.svg": "/static/media/logo-alt.7c177be4d541c1cab216.svg",
     "index.html": "/index.html",
-    "main.1adb030b.css.map": "/static/css/main.1adb030b.css.map",
-    "main.2ad60d6c.js.map": "/static/js/main.2ad60d6c.js.map",
+    "main.8827cfa0.css.map": "/static/css/main.8827cfa0.css.map",
+    "main.f8dfbbb4.js.map": "/static/js/main.f8dfbbb4.js.map",
     "787.1ed0c42c.chunk.js.map": "/static/js/787.1ed0c42c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.1adb030b.css",
-    "static/js/main.2ad60d6c.js"
+    "static/css/main.8827cfa0.css",
+    "static/js/main.f8dfbbb4.js"
   ]
 }

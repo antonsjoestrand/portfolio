@@ -15,7 +15,7 @@
     position: relative;
     @include flex($direction: column, $justify: flex-start, $align: flex-start);
     gap: 3.5rem;
-    width: 25%;
+    width: 30%;
 
     @include media("<tablet") {
       width: 100%;
@@ -30,6 +30,14 @@
       top: 57%;
       left: 0;
       transform: translateY(-50%);
+
+      @include media("<tablet") {
+        top: 45%;
+      }
+
+      @include media("<680px") {
+        top: 57%;
+      }
     }
 
     &__title {
@@ -61,12 +69,20 @@
   }
 
   &__form {
-    width: 75%;
-    padding-left: 6.4rem;
+    width: 70%;
+    margin-left: $padding-xl;
+    padding: 4rem;
+    background-color: $blue-alt1;
+    border-radius: 40px;
 
     @include media("<tablet") {
       width: 100%;
-      padding-left: 0;
+      margin-left: 0;
+    }
+
+    @include media("<phone") {
+      padding: 4rem 3rem;
+      border-radius: 28px;
     }
 
     .message-success,
@@ -106,7 +122,7 @@
         input:-webkit-autofill:active {
           box-shadow: 0 0 0 100px $blue inset;
           -webkit-box-shadow: 0 0 0 100px $blue inset;
-          -webkit-text-fill-color: $white
+          -webkit-text-fill-color: $white;
         }
 
         input[type="text"],

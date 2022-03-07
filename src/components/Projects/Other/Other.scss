@@ -2,13 +2,64 @@
 @import "../../../sass/mixins";
 @import "../../../sass/breakpoints";
 
-.other-page {
-  height: calc(100vh - 182.4px);
-  @include flex($direction: column);
+.other-projects {
+  @include flex($direction: column, $align: flex-start);
+  gap: $padding-xl;
 
-  .soon {
-    font-family: $gilroy;
-    font-size: 6rem;
-    color: $blue-alt3;
+  &__section {
+    width: 100%;
+    @include flex($direction: column, $align: flex-start);
+  }
+
+  .project-title {
+    margin-bottom: 2rem;
+
+    h4 {
+      @include title-h3();
+
+      span:nth-child(1) {
+        color: $green;
+      }
+
+      span:nth-child(2) {
+        color: $light-text;
+      }
+    }
+
+    @include media("<580px") {
+      margin-bottom: 1.4rem;
+
+      h4 {
+        font-size: $text-size-l;
+      }
+    }
+  }
+
+  .project-content {
+    video {
+      width: 100%;
+      border-radius: 40px;
+
+      @include media("<tablet") {
+        border-radius: 28px;
+      }
+
+      @include media("<phone") {
+        border-radius: 14px;
+      }
+    }
+
+    img {
+      width: 100%;
+      border-radius: 40px;
+
+      @include media("<tablet") {
+        border-radius: 28px;
+      }
+
+      @include media("<phone") {
+        border-radius: 14px;
+      }
+    }
   }
 }

@@ -135,7 +135,7 @@
   // ======== IMAGES ========
 
   img {
-    border-radius: 20px;
+    border-radius: 28px;
   }
 
   .wide-image img {
@@ -189,11 +189,11 @@
   .role {
     background-color: $white-alt;
     padding: 5rem;
-    border-radius: 20px;
+    border-radius: 28px;
     margin-top: $padding-xl;
 
     @include media("<tablet") {
-      padding: 2rem;
+      padding: 3rem;
     }
   }
 
@@ -232,10 +232,10 @@
     gap: 3rem;
     background-color: $white-alt;
     padding: 5rem;
-    border-radius: 20px;
+    border-radius: 28px;
 
     @include media("<tablet") {
-      padding: 2rem;
+      padding: 3rem;
     }
 
     .row {
@@ -297,7 +297,7 @@
     .bar2 {
       width: 180px;
       height: 100px;
-      border-radius: 10px;
+      border-radius: 14px;
     }
 
     .bar1 {

@@ -116,9 +116,9 @@ export default function Testimonials() {
             <AnimatePresence>
               {textChange && (
                 <motion.div
-                  initial={{ opacity: 0, y: -40 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: 40 }}
+                  initial={{ opacity: 0, x: -40 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  exit={{ opacity: 0, x: 40 }}
                   className='testimonials__content__text'
                 >
                   <h4>{text.name}</h4>
