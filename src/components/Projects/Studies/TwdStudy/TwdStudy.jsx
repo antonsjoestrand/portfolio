@@ -12,10 +12,13 @@ import TwdWide2 from "./images/twd-wide-2.png";
 import Forecast from "./images/forecast.png";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
+import { useLocomotiveScroll } from "react-locomotive-scroll";
 
-export default function ZenxStudy() {
+export default function TwdStudy() {
+  const { scroll } = useLocomotiveScroll();
+
   const scrollTop = () => {
-    window.scrollTo(0, 0);
+    scroll.scrollTo(0, { duration: 0, disableLerp: true });
   };
 
   useEffect(() => {
@@ -58,7 +61,7 @@ export default function ZenxStudy() {
           <div className='section intro'>
             <div className='title'>
               <h2>TWD</h2>
-              <h3>The Walking Dead fan site & wiki</h3>
+              <h3>Business solution for The Walking Dead fan site & wiki</h3>
             </div>
             <div className='text'>
               <h4>Overview & Context</h4>
@@ -320,10 +323,10 @@ export default function ZenxStudy() {
               <img src={Colors} alt='Colors' />
               <p>
                 In order to still achieve a comic look, the logo was designed
-                with the font <span className='bold'>Shojumaru</span> that has
-                those comic book characteristics to the letters. I combined that
-                with a design of the iconic sheriff's hat used in The Walking
-                Dead.
+                with the typeface <span className='bold'>Shojumaru</span> that
+                has those comic book characteristics to the letters. I combined
+                that with a design of the iconic sheriff's hat used in The
+                Walking Dead.
               </p>
               <img src={Twd} alt='Logo' />
             </div>
@@ -476,7 +479,11 @@ export default function ZenxStudy() {
                     duration: 1.5,
                   }}
                 >
-                  <Link to='/case-studies' onClick={scrollTop} className='cta projects--cta'>
+                  <Link
+                    to='/case-studies'
+                    onClick={scrollTop}
+                    className='cta projects--cta'
+                  >
                     See More Studies
                     <span className='arrow'>
                       <i className='fa-solid fa-angle-right'></i>

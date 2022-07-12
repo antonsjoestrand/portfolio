@@ -58,20 +58,20 @@ export default function About() {
                 <span>
                   <i className='fa-solid fa-location-dot'></i>
                 </span>
-                <span>Vancouver, B.C</span>
+                <span>Gothenburg</span>
               </p>
               <p>
-                I am an aspiring UI/UX Designer & Developer from Sweden who is
-                currently based in Vancouver, where I recently attended VanArts
-                and studied Web Development & Interactive Design. I believe that
-                the trick to life is finding what you love to do, and that is
-                ultimately my biggest strength, I don't just do the things that
-                I do. I love the things that I do.
+                I am a UI/UX Designer & Developer with a big background in
+                technology. I have studied abroad in Vancouver where I met a lot
+                of ambitious and talented people, as well as gathering most of
+                the skillset that I have today. I am currently based in
+                Gothenburg where I am working at Halon to improve their user
+                experience and interface design.
               </p>
               <p>
-                Day-to-day you can find me zoned in on solving a complex problem
-                in design or code, spending time with my friends and family,
-                listening to a podcast or watching a good TV-Show.
+                Day-to-day you can find me zoned in on solving complex
+                design/coding problems, listening to a podcast, reading a design
+                book, or spending time with my family and friends.
               </p>
             </div>
           </div>

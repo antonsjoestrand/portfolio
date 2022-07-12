@@ -7,6 +7,7 @@ import SectionTitle from "../../Title/SectionTitle";
 import Category from "../Category";
 import StudyCard from "./StudyCard";
 import Zenx from "./ZenxStudy/images/zenx.png";
+import Biogeek from "./BiogeekStudy/images/biogeek1.png";
 import Twd from "./TwdStudy/images/twd.png";
 
 export default function Studies() {
@@ -52,6 +53,14 @@ export default function Studies() {
               logo={Zenx}
               text='Freelance solution for projects and payments'
               image='image zenx--img'
+            />
+
+            <StudyCard
+              to='/case-studies/biogeek-study'
+              name='projects-page__cards__card biogeek'
+              logo={Biogeek}
+              text='Online educational solution for biology courses'
+              image='image biogeek--img'
             />
 
             <StudyCard

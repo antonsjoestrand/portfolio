@@ -1,10 +1,13 @@
 import "../../../sass/app.scss";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
+import { useLocomotiveScroll } from "react-locomotive-scroll";
 
 export default function StudyCard({ to, name, logo, text, image }) {
+  const { scroll } = useLocomotiveScroll();
+
   const scrollTop = () => {
-    window.scrollTo(0, 0);
+    scroll.scrollTo(0, { duration: 0, disableLerp: true });
   };
 
   return (

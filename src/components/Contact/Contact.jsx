@@ -72,7 +72,7 @@ export default function Contact() {
             <div className='talk__info__contact'>
               <ul>
                 <li>
-                  <i className='fa-solid fa-phone'></i>+1 778 222 1708
+                  <i className='fa-solid fa-phone'></i>+46 79 359 70 15
                 </li>
                 <li>
                   <i className='fa-solid fa-envelope'></i>

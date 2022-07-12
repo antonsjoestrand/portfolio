@@ -16,10 +16,13 @@ import { FaMobile, FaUserCheck } from "react-icons/fa";
 import { MdDesignServices } from "react-icons/md";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
+import { useLocomotiveScroll } from "react-locomotive-scroll";
 
 export default function ZenxStudy() {
+  const { scroll } = useLocomotiveScroll();
+
   const scrollTop = () => {
-    window.scrollTo(0, 0);
+    scroll.scrollTo(0, { duration: 0, disableLerp: true });
   };
 
   useEffect(() => {
@@ -89,11 +92,10 @@ export default function ZenxStudy() {
             <div className='text'>
               <h4>My Role</h4>
               <p>
-                I worked solely on this project to come up with a solution for
-                the problem. My task was to thoroughly research the issue,
-                solutions that are already out there, and come up with an idea
-                for an application or system that could solve it in an efficient
-                and satisfactory manner.
+                I was the sole researcher and designer. My task was to
+                thoroughly research the issue, solutions that are already out
+                there, and come up with an idea for an application or system
+                that could solve it in an efficient and satisfactory manner.
               </p>
             </div>
             <div className='list'>
@@ -524,7 +526,11 @@ export default function ZenxStudy() {
                     duration: 1.5,
                   }}
                 >
-                  <Link to='/case-studies' onClick={scrollTop} className='cta projects--cta'>
+                  <Link
+                    to='/case-studies'
+                    onClick={scrollTop}
+                    className='cta projects--cta'
+                  >
                     See More Studies
                     <span className='arrow'>
                       <i className='fa-solid fa-angle-right'></i>

@@ -18,10 +18,6 @@
 .twd {
   background-color: #fafafa;
 
-  .brand {
-    width: 300px;
-  }
-
   .study-text {
     color: #1c1c1c;
   }
@@ -29,5 +25,18 @@
   .twd--img {
     background-color: #ffffff;
     @include bg($url: "../../../images/twd_cover.png", $position: bottom);
+  }
+}
+
+.biogeek {
+  background-color: #1a1a1a;
+
+  .study-text {
+    color: #8c8c8c;
+  }
+
+  .biogeek--img {
+    background-color: #f8f8f8;
+    @include bg($url: "../../../images/biogeek_cover.png", $position: bottom);
   }
 }
